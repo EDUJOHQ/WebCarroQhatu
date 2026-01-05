@@ -114,8 +114,6 @@
     </div>
     <!-- Page Header Start -->
 
-
-
     <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -171,7 +169,36 @@
 </head>
 
 <body>
-
+     <!--NAVBAR-->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="position-relative px-lg-0" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5 shadow-sm">
+                <a href="index.html" class="navbar-brand">
+                    <img class="imglogo" src="img/CarroQhatuL.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+               <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">
+                            <img src="img/iconoinicio (1).svg" class="iconhome">
+                        </a>
+                        <a href="about.html" class="nav-item nav-link">Compra un auto</a>
+                        <a href="service.html" class="nav-item nav-link">Vende tu auto</a>            
+                        <a href="#" class="nav-link">Nosotros</a> 
+                        </div class="nav-item ml-lg-3">
+                            <a href="contact.html" class="btn-contacto">
+                                Contáctanos<i class="fa fa-headset"></i>
+                            </a>   
+                        </div>
+                     </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!--FIN NAVBAR-->
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-8">
@@ -210,6 +237,13 @@
                             <span class="tech-value" id="txtAnio"></span>
                         </div>
                     </div>
+                    
+                    <div class="tech-item">
+                        <div>
+                            <span class="tech-label d-block">Motor</span>
+                            <span class="tech-value" id="txtMotor"></span>
+                        </div>
+                    </div>
 
                     <div class="tech-item">
                         <div>
@@ -232,6 +266,181 @@
         </div>
     </div>
 
+    <div id="lightboxOverlay" class="lightbox">
+        <span class="close-lightbox" onclick="closeFullImage()">&times;</span>
+        
+        <div class="zoom-wrapper" id="zoomContainer">
+            <img id="fullImage" src="" alt="Imagen Completa">
+    </div>
+</div>
+
+
+    <!--BANNER DETAIL-->
+        <section class="cards-detailcontainer">
+            <div class="cta-detailgrid">
+                <!-- CARD 1 -->
+                <article class="cta-img-carddetail">
+                    <img src="img/bannerdetail.svg" alt="¿Te gusta este vehículo?">
+                </article>
+            </div>
+        </section>
+
+
+        
+   <!-- INICIO CATÁLOGO 2 -->
+        <h2 class="beneficios-title titulo-linea title-detailcatalogo">
+            También te puede interesar
+            <span></span>
+        </h2>
+        <section class="mas-vendidos container">
+            <div class="mv-grid">        
+                <div class="mv-card">
+                    <img src="img/TIGUAN.jpg" class="mv-img">
+                    <h4>Volkswagen Tiguan 4x4 2012 Mod 2013</h4>
+                    <p class="mv-price">$ 14,700 USD</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 121mil KM |
+                        <i class="fa fa-cogs"></i> 2.0
+                    </p>
+                </div>
+                
+                 <div class="mv-card">
+                    <img src="img/L2002013.jpg" class="mv-img">
+                    <h4>Mitsubishi L200 2013 Mod 2014</h4>
+                    <p class="mv-price">S/. 49,500</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 105mil KM |
+                        <i class="fa fa-cogs"></i> 2.5
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/hiluxsrv20192.jpg" class="mv-img">
+                    <h4>Toyota Hilux SRV 2019</h4>
+                    <p class="mv-price">$ 31,000 USD</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 97mil KM |
+                        <i class="fa fa-cogs"></i> 2.8
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/hilux4x42015.jpg" class="mv-img">
+                    <h4>Toyota Hilux 4x4 2015</h4>
+                    <p class="mv-price">S/. 25,500</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 193mil KM |
+                        <i class="fa fa-cogs"></i> 1kd 3.0
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/renaultlogan.jpg" class="mv-img">
+                    <h4>Renault Logan 2018 Mod 2019</h4>
+                    <p class="mv-price">S/. 29,500</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 58,800 KM |
+                        <i class="fa fa-cogs"></i> 1.6
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/missubishil200.jpg" class="mv-img">
+                    <h4>Mitsubishi L200 4x4 2025</h4>
+                    <p class="mv-price">$ 35,000 USD</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 13mil KM |
+                        <i class="fa fa-cogs"></i> 2.4
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/MAZDACX5.jpg" class="mv-img">
+                    <h4>Mazda CX-5 2016 Mod 2017</h4>
+                    <p class="mv-price">S/. 55,000</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 1279 KM |
+                        <i class="fa fa-cogs"></i> 2.0
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/kinglong.jpg" class="mv-img">
+                    <h4>King Long Santana 2024 Mod 2025</h4>
+                    <p class="mv-price">S/. 63,000</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 21mil KM |
+                        <i class="fa fa-cogs"></i> 2.7
+                    </p>
+                </div>
+
+                <div class="mv-card">
+                    <img src="img/kiasoluto.jpg" class="mv-img">
+                    <h4>Kia Soluto SemiFull 2021-2022</h4>
+                    <p class="mv-price">S/. 37,000</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 84mil KM |
+                        <i class="fa fa-cogs"></i> 1.4
+                    </p>
+                </div>
+                
+                <div class="mv-card">
+                    <img src="img/hyundaiverna.jpg" class="mv-img">
+                    <h4>Hyundai Verna 2020</h4>
+                    <p class="mv-price">S/. 35,000</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 75mil KM |
+                        <i class="fa fa-cogs"></i> 1.4
+                    </p>
+                </div>
+                 <div class="mv-card">
+                    <img src="img/JMCVIGUS.jpg" class="mv-img">
+                    <h4>JMC VIGUS PLUS 4X4 2024</h4>
+                    <p class="mv-price">S/. 63,000</p>
+                    <p class="mv-month">
+                        <i class="fa fa-road"></i> 23mil KM |
+                        <i class="fa fa-cogs"></i> 2.4
+                    </p>
+                </div>
+            </div>
+        </section>
+    <!-- FIN CATÁLOGO2 -->
+
+        <!--INICIO FORMULARIO COTIZACION COMPRA-->
+        <section class="quote-section">
+            <div class="quote-card">
+                
+                <div class="form-side">
+                <h2>¿Tienes un auto específico en mente?</h2>
+                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+
+                <div class="input-group">
+                    <label>¿Qué auto buscas?</label>
+                    <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
+                </div>
+
+                <div class="input-group">
+                    <label>Año / Rango de años</label>
+                    <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
+                </div>
+
+                <div class="input-group">
+                    <label>Presupuesto aproximado</label>
+                    <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
+                </div>
+
+                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
+                </div>
+
+                <div class="image-side">
+                <img src="img/cardetail3.svg" alt="Imagen del carro">
+                </div>
+
+            </div>
+        </section> <!--FIN FORMULARIO COTIZACIÓN-->
+        
+
+
     <script src="js/datos.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -246,8 +455,9 @@
             document.getElementById('txtNombre').innerText = auto.nombre;
             document.getElementById('txtSubtitulo').innerText = auto.subtitulo;
             document.getElementById('txtKmLoc').innerText = `${auto.km} km • ${auto.ubicacion}`;
-            document.getElementById('txtPrecioContado').innerText = `$ ${auto.precioContado}`;
+            document.getElementById('txtPrecioContado').innerText = `${auto.precioContado}`;
             document.getElementById('txtAnio').innerText = auto.anio;
+            document.getElementById('txtMotor').innerText = auto.motor;
             document.getElementById('txtVersion').innerText = auto.version;
             document.getElementById('txtTransmision').innerText = auto.transmision;
             
@@ -295,46 +505,101 @@
             if (currentImgIdx < 0) currentImgIdx = auto.fotos.length - 1;
             updateImage();
         }
-    </script>
-<!--
-    <script src="js/datos.js"></script>
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const autoId = urlParams.get('id');
-            const auto = listaAutos.find(item => item.id === autoId);
 
-            if (auto) {
-                // Función segura para poner texto solo si el ID existe
-                const llenarDato = (id, valor) => {
-                    const el = document.getElementById(id);
-                    if (el) { 
-                        el.innerText = valor; 
-                    } else {
-                        console.warn("No encontré el ID en el HTML: " + id);
-                    }
-                };
-                // Dentro de tu script actual:
-                document.getElementById('breadcrumb-nombre').innerText = auto.nombre;
-                document.getElementById('txtBadgeAnio').innerText = auto.anio;
-                document.getElementById('txtKm').innerText = auto.km;
-                // ... (los demás llenarDato que ya tenías)
+        // Variables para controlar el estado
+        const overlay = document.getElementById('lightboxOverlay');
+        const fullImg = document.getElementById('fullImage');
+        const zoomContainer = document.getElementById('zoomContainer');
+        let isZoomed = false;
 
-                llenarDato('txtNombre', auto.nombre);
-                llenarDato('txtSubtitulo', auto.subtitulo);
-                llenarDato('txtKmLoc', `${auto.km} km • ${auto.ubicacion}`);
-                llenarDato('txtPrecioContado', auto.precioContado);
-                llenarDato('txtPrecioFin', auto.precioFinanciado);
-                llenarDato('txtAnio', auto.anio);
-                llenarDato('txtVersion', auto.version);
-                llenarDato('txtTransmision', auto.transmision);
+        // 1. Abrir el Lightbox
+        document.getElementById('fotoPrincipal').onclick = function() {
+            overlay.style.display = "flex";
+            fullImg.src = this.src;
+            document.body.style.overflow = "hidden";
+        }
 
-                // Para la imagen
-                const imgPrincipal = document.getElementById('fotoPrincipal');
-                if (imgPrincipal && auto.fotos.length > 0) {
-                    imgPrincipal.src = auto.fotos[0];
-                }
+        // 2. Función para cerrar y RESETEAR el zoom
+        function closeFullImage() {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
+            // Importante: Resetear el zoom al cerrar
+            isZoomed = false;
+            fullImg.classList.remove('zoomed');
+            fullImg.style.transformOrigin = "center center";
+        }
+
+        // Cerrar con la tecla ESC
+        document.addEventListener('keydown', (e) => { if(e.key === "Escape") closeFullImage(); });
+
+        // Cerrar al hacer clic en el fondo negro
+        overlay.onclick = function(e) {
+            // Si el clic NO fue en la imagen ni en su contenedor
+            if (e.target === overlay) {
+                closeFullImage();
             }
-        </script>-->
+        }
+
+        // --- LÓGICA DEL ZOOM ---
+
+        // A) Al hacer clic en la imagen grande: Activar/Desactivar Zoom
+        fullImg.onclick = function(e) {
+            // Evitamos que el clic cierre el overlay
+            e.stopPropagation();
+            
+            isZoomed = !isZoomed;
+            
+            if (isZoomed) {
+                this.classList.add('zoomed');
+            } else {
+                this.classList.remove('zoomed');
+                this.style.transformOrigin = "center center"; // Volver al centro
+            }
+        };
+
+        // B) Al mover el mouse sobre el contenedor: Mover la imagen (Panning)
+        zoomContainer.onmousemove = function(e) {
+            if (!isZoomed) return; // Solo si está con zoom activo
+
+            // Calcular la posición del mouse relativa al contenedor
+            const rect = zoomContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Coordenada X dentro del contenedor
+            const y = e.clientY - rect.top;  // Coordenada Y dentro del contenedor
+
+            // Convertir a porcentajes para usar en transform-origin
+            const xPercent = (x / zoomContainer.offsetWidth) * 100;
+            const yPercent = (y / zoomContainer.offsetHeight) * 100;
+
+            // Mover el punto de origen de la imagen hacia donde está el mouse
+            fullImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+        };
+
+        // C) Si el mouse sale del contenedor, volver a centrar suavemente
+        zoomContainer.onmouseleave = function() {
+            if (isZoomed) {
+                fullImg.style.transformOrigin = "center center";
+            }
+        };
+        
+        function sendToWhatsApp() {
+            const phone = "51986754980"; // Tu número aquí
+            const model = document.getElementById('carModel').value;
+            const year = document.getElementById('carYear').value;
+            const budget = document.getElementById('carBudget').value;
+
+            if (!model || !budget) {
+                alert("Por favor completa el modelo y tu presupuesto.");
+                return;
+            }
+
+            const text = `*NUEVA SOLICITUD DE COMPRA*%0A%0A` +
+                        `🚗 *Vehículo:* ${model}%0A` + 
+                        `📅 *Año:* ${year}%0A` +
+                        `💰 *Presupuesto:* ${budget}`;
+
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+            }
+    </script>
         <div id="btnWspFlotante" class="btn-whatsapp">
             <i class="fab fa-whatsapp"></i>
         </div>
@@ -365,135 +630,7 @@
 </body>
 </html>
 
-
-
-
-
-
-    <!-- Detail Start -->
-    <div class="container-fluid pt-5">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-lg-8 mb-5">
-                    <h1 class="display-4 text-uppercase mb-5">Mercedes Benz R3</h1>
-                    <div class="row mx-n2 mb-3">
-                        <div class="col-md-3 col-6 px-2 pb-2">
-                            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-6 px-2 pb-2">
-                            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-6 px-2 pb-2">
-                            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
-                        </div>
-                        <div class="col-md-3 col-6 px-2 pb-2">
-                            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
-                        </div>
-                    </div>
-                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                    <div class="row pt-2">
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-car text-primary mr-2"></i>
-                            <span>Model: 2015</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-cogs text-primary mr-2"></i>
-                            <span>Automatic</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-road text-primary mr-2"></i>
-                            <span>20km/liter</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-eye text-primary mr-2"></i>
-                            <span>GPS Navigation</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-car text-primary mr-2"></i>
-                            <span>Model: 2015</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-cogs text-primary mr-2"></i>
-                            <span>Automatic</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-road text-primary mr-2"></i>
-                            <span>20km/liter</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-eye text-primary mr-2"></i>
-                            <span>GPS Navigation</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-car text-primary mr-2"></i>
-                            <span>Model: 2015</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-cogs text-primary mr-2"></i>
-                            <span>Automatic</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-road text-primary mr-2"></i>
-                            <span>20km/liter</span>
-                        </div>
-                        <div class="col-md-3 col-6 mb-2">
-                            <i class="fa fa-eye text-primary mr-2"></i>
-                            <span>GPS Navigation</span>
-                        </div>
-                    </div>
-               </div>
-
-                <div class="col-lg-4 mb-5">
-                    <div class="bg-secondary p-5">
-                        <h3 class="text-primary text-center mb-4">Check Availability</h3>
-                        <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Pickup Location</option>
-                                <option value="1">Location 1</option>
-                                <option value="2">Location 2</option>
-                                <option value="3">Location 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Drop Location</option>
-                                <option value="1">Location 1</option>
-                                <option value="2">Location 2</option>
-                                <option value="3">Location 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <div class="date" id="date1" data-target-input="nearest">
-                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date"
-                                    data-target="#date1" data-toggle="datetimepicker" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="time" id="time1" data-target-input="nearest">
-                                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Time"
-                                    data-target="#time1" data-toggle="datetimepicker" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <select class="custom-select px-4" style="height: 50px;">
-                                <option selected>Select Person</option>
-                                <option value="1">Person 1</option>
-                                <option value="2">Person 2</option>
-                                <option value="3">Person 3</option>
-                            </select>
-                        </div>
-                        <div class="form-group mb-0">
-                            <button class="btn btn-primary btn-block" type="submit" style="height: 50px;">Check Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Detail End 
-
-
-    <!-- Related Car Start -->
+    <!-- Related Car Start 
     <div class="container-fluid pb-5">
         <div class="container pb-5">
             <h2 class="mb-4">Related Cars</h2>
@@ -576,8 +713,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Related Car End 
+    </div>Related Car End -->
 
     <!-- Vendor Start -->
     <div class="container-fluid py-5">

@@ -1874,3 +1874,328 @@ a:hover {
     0% { transform: scale(1); opacity: 0.5; }
     100% { transform: scale(1.6); opacity: 0; }
 }
+
+/*DETAIL PAGE*/
+/* Estilo para que la imagen principal parezca clickeable */
+.img-main {
+    cursor: zoom-in;
+    transition: 0.3s;
+}
+.img-main:hover {
+    filter: brightness(0.9);
+}
+
+/* El fondo negro del visualizador */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999999; /* Por encima de todo, incluso del botón de WhatsApp */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen agrandada */
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    animation: zoomAnim 0.3s ease;
+}
+
+/* Botón de cerrar */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes zoomAnim {
+    from {transform: scale(0.7); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+/* Estilo para que la imagen principal parezca clickeable */
+.img-main {
+    cursor: zoom-in;
+    transition: 0.3s;
+}
+.img-main:hover { filter: brightness(0.9); }
+
+/* El fondo negro del visualizador */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Un poco más oscuro */
+    justify-content: center;
+    align-items: center;
+}
+
+/* NUEVO: El contenedor que recorta la imagen */
+.zoom-wrapper {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* CLAVE: Esto evita que la imagen gigante se salga */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* La imagen dentro del lightbox */
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    /* Transición suave para el zoom y el movimiento */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform-origin 0.4s ease;
+}
+
+/* Clase que activa el ZOOM */
+.lightbox img.zoomed {
+    cursor: zoom-out; /* El cursor cambia para indicar que puedes alejar */
+    transform: scale(2.5); /* Nivel de zoom (2.5 veces más grande) */
+}
+
+.close-lightbox {
+    position: absolute; top: 20px; right: 35px;
+    color: white; font-size: 60px; font-weight: bold; cursor: pointer; z-index: 10;
+}
+/* Ajustes para los iconos y listas */
+.icon-box {
+  font-size: 24px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 45px;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.check-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Para el diseño inverso si lo usas */
+.container.reverse {
+  flex-direction: row-reverse;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 15px 30px;
+  color: #1a56e8;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Responsive para el diseño inverso */
+@media (max-width: 768px) {
+  .container.reverse {
+    flex-direction: column; /* En móvil siempre el texto arriba o abajo según prefieras */
+  }
+}
+
+.title-detailcatalogo{
+    padding: 4vw;
+    color: #0c0c0c;
+}
+
+/*CARTA ¿TE GUSTA ESTE VEHÍCULO?*/
+ .cta-img-carddetail {
+            position: relative;
+            width: 100%;
+            height: auto; 
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: 0.3s ease;
+}
+.cards-detailcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-detailgrid {  
+    display: flex;
+    width: 95vw;
+    gap: 15px;
+    padding-top: 1vw;
+}
+
+.cta-img-carddetail {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
+    background: #000; 
+    cursor: pointer;
+}
+
+.cta-img-carddetail:hover {
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.25); 
+    z-index: 10;
+}
+
+.cta-img-carddetail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.cta-img-carddetail:hover img {
+    transform: scale(1.0);
+    filter: brightness(1.1); 
+}
+
+.cta-img-carddetail::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; 
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg); 
+    transition: 0.7s;
+}
+
+.cta-img-carddetail:hover::after {
+    left: 150%; 
+}
+
+/*FORMULARIO COTIZACION*/
+.quote-section {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  max-width: 900px; /* Ancho del "boxed" */
+  width: 100%;
+  display: flex; /* Alinea hijos en fila */
+  align-items: center; /* Centra verticalmente */
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.form-side {
+  flex: 1.2; /* El formulario ocupa un poco más de espacio */
+  padding-right: 30px;
+}
+.form-side h2 {
+  font-size: 3vw;
+  color:#1F1F1F;
+}
+.form-side p {
+  font-size: 1.5vw;
+  color: #3E4A5B;
+}
+.form-side label{
+    color: #1B2532;
+}
+
+.image-side {
+  flex: 1; /* La imagen ocupa el espacio restante */
+  display: flex;
+  justify-content: center;
+}
+
+.image-side img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Estilos de los inputs para que se vean limpios */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-wspp {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a62ee; /* Color suave como el de Kavak antes de activar */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-wspp:hover {
+  background-color: #FBD333; /* Cambia a color WhatsApp al pasar el mouse */
+  color: rgb(128, 1, 1);
+}
+@media (max-width: 768px) {
+  .quote-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-side {
+    padding-right: 0;
+    order: 2;
+  }
+  .image-side {
+    order: 1;
+    margin-bottom: 20px;
+  }
+}
+
+/*FIN DETAIL PAGE*/
