@@ -100,18 +100,109 @@
 
 
     <!-- About Start -->
+     <section class="compra-mosaico">
+  <div class="container">
+    <div class="grid-layout">
+      
+      <div class="item hero-text">
+        <h1>Compra tu auto con <span class="highlight">total confianza</span></h1>
+        <p>En Juliaca y Arequipa, transformamos la incertidumbre en una decisión inteligente y segura.</p>
+        <a href="#" class="btn-primary">Ver Catálogo</a>
+      </div>
 
+      <div class="item card-feature">
+        <img class="iconinspeccion" src="img/busquedacompra.svg" alt="Icono de seguro">
+        <h3>Inspección 360°</h3>
+        <p>Evaluación técnica, mecánica y estructural profunda.</p>
+      </div>
+
+      <div class="item card-feature blue-bg">
+        <img class="iconlegal" src="img/iconlegal.svg">
+        <h3>Blindaje Legal</h3>
+        <p>Verificación de documentos, gravámenes y antecedentes.</p>
+      </div>
+
+      <div class="item card-feature">
+        <img class="icontasacion" src="img/iconlegal.svg">        
+        <h3>Tasación Justa</h3>
+        <p>Precios reales basados en el estado actual del mercado.</p>
+      </div>
+
+      <div class="item social-proof">
+        <h2>+500K</h2>
+        <p>Seguidores nos respaldan en nuestras redes sociales.</p>
+      </div>
+
+      <div class="item cta-box">
+        <div class="form-side">
+                <h2>¿Tienes un auto específico en mente?</h2>
+                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+
+                <div class="input-group">
+                    <label>¿Qué auto buscas?</label>
+                    <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
+                </div>
+
+                <div class="input-group">
+                    <label>Año / Rango de años</label>
+                    <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
+                </div>
+
+                <div class="input-group">
+                    <label>Presupuesto aproximado</label>
+                    <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
+                </div>
+
+                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
+                </div>
+
+                <div class="image-side">
+                <img src="img/cardetail3.svg" alt="Imagen del carro">
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!--INICIO FORMULARIO COTIZACION COMPRA-->
+        <section class="quote-section">
+            <div class="quote-card">
+                
+                <div class="form-side">
+                <h2>¿Tienes un auto específico en mente?</h2>
+                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+
+                <div class="input-group">
+                    <label>¿Qué auto buscas?</label>
+                    <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
+                </div>
+
+                <div class="input-group">
+                    <label>Año / Rango de años</label>
+                    <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
+                </div>
+
+                <div class="input-group">
+                    <label>Presupuesto aproximado</label>
+                    <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
+                </div>
+
+                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
+                </div>
+
+                <div class="image-side">
+                <img src="img/cardetail3.svg" alt="Imagen del carro">
+                </div>
+
+            </div>
+        </section> <!--FIN FORMULARIO COTIZACIÓN-->
     <!--PRUEBA-->
     
         <div class="section-compra">
                 <h1 class="preguntacompra titulo-linea">
+                    Conoce los servicios que tenemos para ti :
                     <span></span>
-                    ¿Quieres comprar un vehículo?
-                    <span></span>
-                </h1>
-            <div class="subtexto-container">
-                <h1 class="subtexto">Conoce los servicios que tenemos para ti :</h1>        
-            </div>        
+                </h1>      
         </div>
 
         <!-- 3 CARDS INICIALES -->
@@ -135,35 +226,12 @@
         <!-- FINAL 3 CARDS INICIALES -->
 
 
-
-        <div class="compra-container">
-        <div class="cardsservicios-container"></div>            
-            <div class="cardcompra">
-                <div class="numbercard">1</div>
-                <h3>Cotización</h3>
-                <p>Dinos el modelo específico del vehículo que quieres comprar y nosotros nos encargamos de entregarte una cotización del precio actual del vehículo.</p>
-            </div>
-
-            <div class="cardcompra">
-                <div class="numbercard">2</div>
-                <h3>Busqueda</h3>
-                <p>Ponemos a disposición nuestro equipo de trabajo, plataformas y contactos para encontrar el vehículo que quieres comprar. Te entregamos un portafolio digital con un mínimo de 05 propuestas.<p>
-            </div>
-
-            <div class="cardcompra">
-                <div class="numbercard">3</div>
-                <h3>Recomendaciones</h3>
-                <p>Hacemos la búsqueda y revisamos los detalles del vehículo por ti. Si el vehículo cumple con los requisitos solicitados, te lo recomendamos.</p>
-            </div>
-        </div>
-    </div>
-    <!--FIN PRUEBA-->
+    
 
     <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5">Bienvenido a <span class="text-primary">CarroQhatu</span></h1>
+        <div class="container pt-5 pb-3">        
             <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
+                <div class="col-lg-20 text-center">
                     <img class="w-75 mb-4" src="img/about.png" alt="">
                     <p>Justo et eos et ut takimata sed sadipscing dolore lorem, et elitr labore labore voluptua no rebum sed, stet voluptua amet sed elitr ea dolor dolores no clita. Dolores diam magna clita ea eos amet, amet rebum voluptua vero vero sed clita accusam takimata. Nonumy labore ipsum sea voluptua sea eos sit justo, no ipsum sanctus sanctus no et no ipsum amet, tempor labore est labore no. Eos diam eirmod lorem ut eirmod, ipsum diam sadipscing stet dolores elitr elitr eirmod dolore. Magna elitr accusam takimata labore, et at erat eirmod consetetur tempor eirmod invidunt est, ipsum nonumy at et.</p>
                 </div>

@@ -318,13 +318,12 @@ h6,
             
         }
         .section-compra {
-            padding-top: 9vw;
-            padding-left: 3vw;
+            padding: 3vw;
         }
         .preguntacompra{
             font-size: 42px;
             color: #242424;
-            margin: 0 0 20px 0px;
+            margin: 0 0 10px 0px;
             font-weight: 700;
         }
         .subtexto-container{            
@@ -762,6 +761,24 @@ h6,
 }
 
 .mv-arrow:hover {
+    background: #FBD333;
+    color: #000;
+}
+.mv2-arrow {
+    background: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+    font-size: 22px;
+    color: #333;
+    transition: 0.2s ease;
+    z-index: 20;
+}
+
+.mv2-arrow:hover {
     background: #FBD333;
     color: #000;
 }
@@ -1876,6 +1893,21 @@ a:hover {
 }
 
 /*DETAIL PAGE*/
+/*linea separadora detail*/
+.separador-detail {    
+    font-size: 3.5vw;
+    text-align: center;
+}
+.detail-linea {    
+    display: flex;
+    align-items: center;
+}
+.detail-linea span{
+    flex: 1;
+    height: 2px;
+    background: #FBD333;
+}
+
 /* Estilo para que la imagen principal parezca clickeable */
 .img-main {
     cursor: zoom-in;
@@ -2101,9 +2133,10 @@ a:hover {
 
 /*FORMULARIO COTIZACION*/
 .quote-section {
-  padding: 10px 10px;
+  padding: 80px 10px;
   display: flex;
   justify-content: center;
+  background: #e2e2e2;
 }
 
 .quote-card {
@@ -2199,3 +2232,119 @@ a:hover {
 }
 
 /*FIN DETAIL PAGE*/
+/*COMPRA UN AUTO*/
+:root {
+  --primary-color: #FBD333; /* Color turquesa de CarroQhatu */
+  --secondary-color: #1b262c; /* Azul oscuro/Negro */
+  --text-light: #808080;
+  --text-dark: #333;
+  --bg-gray: #f4f7f6;
+}
+
+.compra-mosaico {
+  padding: 50px 5%;
+  background-color: var(--bg-gray);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+}
+
+/* Ajustes de tamaño para celdas específicas */
+.hero-text {
+  grid-column: span 2;
+  background: #B70021;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-text h1{
+    color: white;
+}
+.hero-text p{
+    color: white;
+}
+
+/* Estilo general de las tarjetas */
+.item {
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.card-feature {
+  background: var(--secondary-color);
+  text-align: center;
+}
+.card-feature h3, p{
+    color: white;
+}
+
+.blue-bg {
+  background-color: #B70021;
+  color: white;
+}
+.blue-bg h3{
+  color: white;
+}
+
+.social-proof {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-proof h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.cta-box {
+  background: #e1f5fe;
+  display: flex;
+  grid-column: span 2;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.iconinspeccion,
+.iconlegal,
+.icontasacion{
+    width: 5vw;
+}
+
+/* Tipografía y Botones */
+h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
+.highlight { color: var(--primary-color); }
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.btn-primary { background: var(--primary-color); color: white; width: fit-content; }
+.btn-secondary { border: 2px solid var(--primary-color); color: var(--primary-color); }
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .hero-text { grid-column: span 1; }
+  h1 { font-size: 1.8rem; }
+}
