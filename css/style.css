@@ -38,6 +38,11 @@ h6,
     height: auto;
     overflow: hidden;
 }
+.btn-subir{
+    background: #FBD333;
+    color: black;
+    border-radius: 10px;
+}
 
 .contsearch{
     display: flex;
@@ -322,7 +327,7 @@ h6,
         }
         .preguntacompra{
             font-size: 42px;
-            color: #242424;
+            color: #2B2E4A;
             margin: 0 0 10px 0px;
             font-weight: 700;
         }
@@ -351,6 +356,7 @@ h6,
         .cards-compracontainer {
             display: flex;
             justify-content: center;
+            padding-bottom: 4vw;
         }
 
         .cta-compragrid {  
@@ -2371,12 +2377,148 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
 .btn-vercatalogo { background: #FBD333; color: black; width: fit-content; }
 .btn-secondary { border: 2px solid var(--primary-color); color: var(--primary-color); }
 
+.btn-footer{ 
+    border-radius:8px;
+    border: none;
+    margin-left: 0.5vw;
+    color: white;
+    background-color: #D46A07;
+}
+.btn-footer:hover{
+    background-color: #FFA800;
+    color: black;
+    font-weight: bold;
+}
+
 /* Responsivo para móviles */
 @media (max-width: 768px) {
   .hero-text { grid-column: span 1; }
   h1 { font-size: 1.8rem; }
 }
+.questionsection{
+    font-size: 4vw;
+}
+.textsection{
+    font-size: 3vw;
+    padding: 3vw;
+    width: 99%;
+    color: #0c0c0c;
+}
+.section-buttongrid {
+    border: none;
+
+}
 .carousel-icon{
     width: 14vw;
     height: auto;    
 }
+
+
+/*PRUEBA FOOTER*/
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Tres columnas: Marca (25%), Centro (50%), Contacto (25%) */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+}
+.logo-footer{
+    width: 15vw;
+}
+/* Columna Central Organizada */
+.col-center {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.col-contact h3{
+    margin-top: 2vw;
+}
+.contact-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.center-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Títulos y Enlaces */
+.h3footer {
+    color: #FBD333;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul { list-style: none; padding: 0; }
+ul li { margin-bottom: 8px; }
+a { color: #bbb; text-decoration: none; transition: 0.3s; }
+a:hover { color: #f37021; }
+
+/* Formulario debajo de las columnas centrales */
+.footer-form {
+    display: flex;
+    max-width: 400px;
+}
+
+.footer-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.footer-form button {
+    background-color: #FBD333;
+    color:black;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+.footer-form button:hover {
+    background-color: #D46A07;
+    color: white;
+}
+
+.footer-bottom{
+    display: flex;
+    margin-top: 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Iconos de Redes Sociales (Cuadritos) */
+.social-icons { display: flex; gap: 10px; margin-top: 20px; }
+.icon-box {
+    width: 35px; height: 35px;
+    background: #222;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 5px; color: #fff;
+}
+.icon-box:hover { background: #f37021; color: white;}
+
+/* Responsive: En celulares todo se pone en una sola columna */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .center-top { justify-content: center; gap: 50px; }
+    .footer-form { margin: 0 auto; }
+    .social-icons, .contact-links { justify-content: center; }
+}
+/**/
