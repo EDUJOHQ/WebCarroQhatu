@@ -2238,7 +2238,6 @@ a:hover {
   --secondary-color: #1b262c; /* Azul oscuro/Negro */
   --text-light: #808080;
   --text-dark: #333;
-  --bg-gray: #f4f7f6;
 }
 
 .compra-mosaico {
@@ -2281,7 +2280,6 @@ a:hover {
 .item:hover {
   transform: translateY(-5px);
 }
-
 .card-feature {
   background: var(--secondary-color);
   text-align: center;
@@ -2314,37 +2312,71 @@ a:hover {
 }
 
 .cta-box {
-  background: #e1f5fe;
+  background: #B70021;
   display: flex;
   grid-column: span 2;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
+.formquestion{
+    color: #FBD333 !important;
+}
+.form-p{
+    color: white !important;
+}
+.question1,
+.question2,
+.question3{    
+    color: white !important;
+}
+
 .iconinspeccion,
 .iconlegal,
 .icontasacion{
     width: 5vw;
 }
 
+.btn-wsppform{
+    width: 100%;
+    padding: 14px;
+    background-color: #FBD333;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-wsppform:hover {
+    background-color: #4a62ee;
+    color: white;
+}
+
 /* Tipografía y Botones */
 h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
 .highlight { color: var(--primary-color); }
 
-.btn-primary, .btn-secondary {
+.btn-vercatalogo, .btn-secondary {
   display: inline-block;
   padding: 12px 25px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 15px;
 }
 
-.btn-primary { background: var(--primary-color); color: white; width: fit-content; }
+.btn-vercatalogo { background: #FBD333; color: black; width: fit-content; }
 .btn-secondary { border: 2px solid var(--primary-color); color: var(--primary-color); }
 
 /* Responsivo para móviles */
 @media (max-width: 768px) {
   .hero-text { grid-column: span 1; }
   h1 { font-size: 1.8rem; }
+}
+.carousel-icon{
+    width: 14vw;
+    height: auto;    
 }

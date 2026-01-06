@@ -107,11 +107,11 @@
       <div class="item hero-text">
         <h1>Compra tu auto con <span class="highlight">total confianza</span></h1>
         <p>En Juliaca y Arequipa, transformamos la incertidumbre en una decisión inteligente y segura.</p>
-        <a href="#" class="btn-primary">Ver Catálogo</a>
+        <a href="#" class="btn-vercatalogo">Ver Catálogo</a>
       </div>
 
       <div class="item card-feature">
-        <img class="iconinspeccion" src="img/busquedacompra.svg" alt="Icono de seguro">
+        <img class="iconinspeccion" src="img/iconbusqueda.svg" alt="Icono de seguro">
         <h3>Inspección 360°</h3>
         <p>Evaluación técnica, mecánica y estructural profunda.</p>
       </div>
@@ -123,7 +123,7 @@
       </div>
 
       <div class="item card-feature">
-        <img class="icontasacion" src="img/iconlegal.svg">        
+        <img class="icontasacion" src="img/icontasacion.svg">        
         <h3>Tasación Justa</h3>
         <p>Precios reales basados en el estado actual del mercado.</p>
       </div>
@@ -135,25 +135,25 @@
 
       <div class="item cta-box">
         <div class="form-side">
-                <h2>¿Tienes un auto específico en mente?</h2>
-                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+                <h2 class="formquestion">¿Tienes un auto específico en mente?</h2>
+                <p class="form-p">Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
 
                 <div class="input-group">
-                    <label>¿Qué auto buscas?</label>
+                    <label class="question1">¿Qué auto buscas?</label>
                     <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
                 </div>
 
                 <div class="input-group">
-                    <label>Año / Rango de años</label>
+                    <label class="question2">Año / Rango de años</label>
                     <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
                 </div>
 
                 <div class="input-group">
-                    <label>Presupuesto aproximado</label>
+                    <label class="question3">Presupuesto aproximado</label>
                     <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
                 </div>
 
-                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
+                <button onclick="sendToWhatsApp()" class="btn-wsppform">Cotizar auto</button>
                 </div>
 
                 <div class="image-side">
@@ -163,39 +163,6 @@
     </div>
   </div>
 </section>
-
-    <!--INICIO FORMULARIO COTIZACION COMPRA-->
-        <section class="quote-section">
-            <div class="quote-card">
-                
-                <div class="form-side">
-                <h2>¿Tienes un auto específico en mente?</h2>
-                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
-
-                <div class="input-group">
-                    <label>¿Qué auto buscas?</label>
-                    <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
-                </div>
-
-                <div class="input-group">
-                    <label>Año / Rango de años</label>
-                    <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
-                </div>
-
-                <div class="input-group">
-                    <label>Presupuesto aproximado</label>
-                    <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
-                </div>
-
-                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
-                </div>
-
-                <div class="image-side">
-                <img src="img/cardetail3.svg" alt="Imagen del carro">
-                </div>
-
-            </div>
-        </section> <!--FIN FORMULARIO COTIZACIÓN-->
     <!--PRUEBA-->
     
         <div class="section-compra">
@@ -225,76 +192,158 @@
         </section>
         <!-- FINAL 3 CARDS INICIALES -->
 
-
-    
-
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">        
             <div class="row justify-content-center">
                 <div class="col-lg-20 text-center">
-                    <img class="w-75 mb-4" src="img/about.png" alt="">
-                    <p>Justo et eos et ut takimata sed sadipscing dolore lorem, et elitr labore labore voluptua no rebum sed, stet voluptua amet sed elitr ea dolor dolores no clita. Dolores diam magna clita ea eos amet, amet rebum voluptua vero vero sed clita accusam takimata. Nonumy labore ipsum sea voluptua sea eos sit justo, no ipsum sanctus sanctus no et no ipsum amet, tempor labore est labore no. Eos diam eirmod lorem ut eirmod, ipsum diam sadipscing stet dolores elitr elitr eirmod dolore. Magna elitr accusam takimata labore, et at erat eirmod consetetur tempor eirmod invidunt est, ipsum nonumy at et.</p>
+                    <img class="w-75 mb-4" src="img/about.png" alt="">                    
+                    <h4 class="questionsection">¿Listo para encontrar tu compañero de ruta?</h4>
+                    <h2 class="textsection">Explora nuestro inventario de vehículos verificados o solicita una inspección para el auto que tienes visto.</h2>                                    
+                </div>
+                <div class="section-buttongrid">
+                    <button>Ver catálogo</button>
+                    <button>Solicitar asesoria</button>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-lg-4 mb-2">
-                    <div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-                            <i class="fa fa-2x fa-headset text-secondary"></i>
-                        </div>
-                        <h4 class="text-uppercase m-0">24/7 Car Rental Support</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-2">
-                    <div class="d-flex align-items-center bg-secondary p-4 mb-4" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-                            <i class="fa fa-2x fa-car text-secondary"></i>
-                        </div>
-                        <h4 class="text-light text-uppercase m-0">Car Reservation Anytime</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-2">
-                    <div class="d-flex align-items-center bg-light p-4 mb-4" style="height: 150px;">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary ml-n4 mr-4" style="width: 100px; height: 100px;">
-                            <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
-                        </div>
-                        <h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>            
     </div>
     <!-- About End -->
 
+    <!-- INICIO COMENTARIOS OPINIONES -->
+        <h2 class="title-mv titulo-linea title-videos">
+        Lo que opinan nuestros clientes
+        <span></span>
+        </h2>
 
-    <!-- Banner Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row mx-0">
-                <div class="col-lg-6 px-0">
-                    <div class="px-5 bg-secondary d-flex align-items-center justify-content-between" style="height: 350px;">
-                        <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="img/banner-left.png" alt="">
-                        <div class="text-right">
-                            <h3 class="text-uppercase text-light mb-3">Want to be driver?</h3>
-                            <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                            <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
-                        </div>
+        <!-- FILA SUPERIOR (IZQUIERDA) -->
+        <section class="testimonios">
+        <div class="testimonios-viewport">
+            <div class="testimonios-track izq">
+
+            <!-- GRUPO 1 -->
+            <div class="testimonios-group">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/TOYOTA.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/rosam.jpg">
+                    <div class="user-info">
+                    <strong>Rosa Mamani</strong>
+                    <span>18 octubre 2024</span>
                     </div>
                 </div>
-                <div class="col-lg-6 px-0">
-                    <div class="px-5 bg-dark d-flex align-items-center justify-content-between" style="height: 350px;">
-                        <div class="text-left">
-                            <h3 class="text-uppercase text-light mb-3">Looking for a car?</h3>
-                            <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                            <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
-                        </div>
-                        <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="img/banner-right.png" alt="">
+                <p>Gracias a la inspección compré con total confianza.</p>
+                </div>
+
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/juan.jpg">
+                    <div class="user-info">
+                    <strong>Juan Huarachi</strong>
+                    <span>22 septiembre 2024</span>
                     </div>
+                </div>
+                <p>Buen servicio y trato cordial. Muy confiables.</p>
+                </div>
+
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/lucia.jpg">
+                    <div class="user-info">
+                    <strong>Lucía Díaz</strong>
+                    <span>01 enero 2025</span>
+                    </div>
+                </div>
+                <p>Revisión completa antes de comprar el vehículo.</p>
+                </div>
+                <div class="testimonios-card">
+                    <div class="user">
+                    <img src="img/traveler.jpg">
+                        <div class="user-info">
+                            <strong>Traveler</strong>
+                            <span>25 diciembre 2024</span>
+                        </div>
+                    </div>
+                    <p>Me explicaron cada detalle del vehículo, buen servicio me ayudaron bastante.</p>
+                </div>
+                <div class="testimonios-card">
+                    <div class="user">
+                    <img src="img/sonia.jpg">
+                        <div class="user-info">
+                            <strong>Sonia Condori</strong>
+                            <span>08 enero 2025</span>
+                        </div>
+                    </div>
+                    <p>La tasación fue justa y bien sustentada. Logré vender rápido.</p>
+                </div>
+                
+                <div class="testimonios-card">
+                    <div class="user">
+                    <img src="img/Edwin.jpg">
+                        <div class="user-info">
+                            <strong>Edwin2987</strong>
+                            <span>18 noviembre 2024</span>
+                        </div>
+                    </div>
+                    <p>Buen acompañamiento y revisión completa. Muy responsable</p>
+                </div>
+            </div>
+            <!-- GRUPO 2 (DUPLICADO EXACTO) -->
+            <div class="testimonios-group">
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/rosam.jpg">
+                    <div class="user-info">
+                    <strong>Rosa Mamani</strong>
+                    <span>18 octubre 2024</span>
+                    </div>
+                </div>
+                <p>Gracias a la inspección compré con total confianza.</p>
+                </div>
+
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/juan.jpg">
+                    <div class="user-info">
+                    <strong>Juan Huarachi</strong>
+                    <span>22 septiembre 2024</span>
+                    </div>
+                </div>
+                <p>Buen servicio y trato cordial. Muy confiables.</p>
+                </div>
+
+                <div class="testimonios-card">
+                <div class="user">
+                    <img src="img/lucia.jpg">
+                    <div class="user-info">
+                    <strong>Lucía Díaz</strong>
+                    <span>01 enero 2025</span>
+                    </div>
+                </div>
+                <p>Revisión completa antes de comprar el vehículo.</p>
+                </div>  
+                 <div class="testimonios-card">
+                    <div class="user">
+                    <img src="img/traveler.jpg">
+                        <div class="user-info">
+                            <strong>Traveler</strong>
+                            <span>25 diciembre 2024</span>
+                        </div>
+                    </div>
+                    <p>Me explicaron cada detalle del vehículo, buen servicio me ayudaron bastante.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Banner End -->
+        </section>
+
+
+   
 
 
     <!-- Vendor Start -->
@@ -331,75 +380,40 @@
     <!-- Vendor End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+     <!-- Footer Start -->
+    <div class="py-5 px-sm-3 px-md-5 footer-color" style="margin-top: 20px;">
         <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope text-white mr-3"></i>info@example.com</p>
-                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+            <div class="content-footercontact">
+                <h4 class="text-uppercase text-footer mb-4">CONTACTO</h4>
+                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+51 972043502</p>
+                <p><i class="fa fa-envelope text-white mr-3"></i>Rbm.aracayo@gmail.com</p>
+                <h6 class="text-uppercase text-white py-2">Siguenos en nuestras redes</h6>
                 <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.tiktok.com/@carroqhatu" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.facebook.com/carroqhatu" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.instagram.com/carroqhatu" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-dark btn-lg-square" href="https://www.youtube.com/@revelinobrayan2134" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
-                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
-                <div class="row mx-n1">
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-1.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-6.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
-                <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+            <div class="col-lg-9">
+                <h4 class="text-uppercase text-footer mb-4">¿QUIÉRES QUE TE CONTACTEMOS?</h4>
+                <p class="mb-4">Deja tu correo electrónico para que nos pongamos en contacto contigo.</p>
                 <div class="w-100 mb-3">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Your Email">
+                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Tu Email aquí">
                         <div class="input-group-append">
-                            <button class="btn btn-primary text-uppercase px-3">Sign Up</button>
+                            <button class="btn btn-primary text-uppercase px-3">Enviar</button>
                         </div>
                     </div>
-                </div>
-                <i>Lorem sit sed elitr sed kasd et</i>
+                </div>                
             </div>
+            <div class="copyfooter">
+        <p class="mb-2 text-center">&copy; <a href="#">CarroQhatu</a> • Todos los Derechos Reservados •</p>
+        <p class="m-0 text-center">Plataforma lider en la Compra y Venta de Vehículos Usados en el Perú</p>
+    </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
-    </div>
+    
     <!-- Footer End -->
 
 
@@ -419,6 +433,26 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function sendToWhatsApp() {
+            const phone = "51986754980"; // Tu número aquí
+            const model = document.getElementById('carModel').value;
+            const year = document.getElementById('carYear').value;
+            const budget = document.getElementById('carBudget').value;
+
+            if (!model || !budget) {
+                alert("Por favor completa el modelo y tu presupuesto.");
+                return;
+            }
+
+            const text = `*NUEVA SOLICITUD DE COMPRA*%0A%0A` +
+                        `🚗 *Vehículo:* ${model}%0A` + 
+                        `📅 *Año:* ${year}%0A` +
+                        `💰 *Presupuesto:* ${budget}`;
+
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+            }
+    </script>
 </body>
 
 </html>
