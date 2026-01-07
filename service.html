@@ -76,214 +76,207 @@
                 <video class="banner-video" autoplay muted loop playsinline>
                     <source src="img/bannervende.mp4" type="video/mp4">
                 </video>
-                <div class="banner-overlay">
+                <div class="banner-overlayventa">                    
                 </div>
             </section>
     <!-- Banner Principal Final -->
-
-        <!-- barra busqueda c
-                    <div class="cotizacioncontent">
-                        <div class="cotizacion-barras">
-                            <h1 class="titlecotiza">Conoce el valor de tu auto</h1><p></p>
-                            <p class="descripcotiza">Encuentra la mejor tasación para tu auto y descubre las ofertas que tenemos para ti!</p>                        
-                            <div class="campos-busqueda">
-                                 <div class="dropdown">
-                                    <select name="select-año" class="custom-select" id="seleccion-año">
-                                        <option value="0" disabled selected>Año</option>
-                                        <option value="1">2026</option>
-                                        <option value="1">2025</option>
-                                        <option value="1">2024</option>
-                                        <option value="2">2023</option>
-                                        <option value="3">2022</option>
-                                        <option value="4">2021</option>
-                                        <option value="5">2020</option>
-                                        <option value="6">2019</option>
-                                        <option value="7">2018</option>
-                                        <option value="8">2017</option>
-                                        <option value="9">2016</option>
-                                        <option value="10">2015</option>
-                                    </select>
-                                </div>
-                                <div class="dropdown">
-                                    <select name="select-marca" class="custom-select" id="seleccion">                                                                              
-                                        <option value="0" disabled selected>Marca</option>
-                                        <option value="1">Toyota<img src="img/2.png"></option>
-                                        <option value="2">Nissan</option>
-                                        <option value="3">Chevrolet</option>
-                                        <option value="4">Honda</option>
-                                        <option value="5">Hyundai</option>
-                                        <option value="6">Kia</option>
-                                        <option value="7">Mazda</option>
-                                        <option value="8">Ford</option>
-                                        <option value="9">Volkswagen</option>
-                                        <option value="10">Renault</option>
-                                    </select>
-                                </div>
-                                <div class="modelo">
-                                    <input type="text" placeholder="Modelo de tu auto">
-                                </div>
-                            </div>
-                        </div>                    
-                        <div class="search-bar">
-                            <i class="fa fa-search"></i>
-                            <input type="text" placeholder="Busca tu auto ideal...">
-                            <button class="btn-search">Buscar</button>
-                        </div>   
-                    </div>
-        <!-- fin barra busqueda cotización-->
-
-
-        <!--seccion cotizacion-->
-        <div class="card-cotizador">
-            <h2>Cotizá y vendé tu auto en 1 día</h2>
-            <p>¡Olvidate de la burocracia! Vendé online o cambialo por un auto con beneficios exclusivos.</p>
-            
-            <div class="form-container">
-                <select id="year" class="input-cotizar">
-                    <option value="">Año</option>
-                    <option value="2025">2025</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                    <option value="2022">2022</option>
-                    <option value="2021">2021</option>
-                    <option value="2020">2020</option>
-                    <option value="2019">2019</option>
-                    <option value="2018">2018</option>
-                    <option value="2017">2017</option>
-                    <option value="2016">2016</option>
-                    <option value="2015">2015</option>
-                    <option value="2014">2014</option>
-                    <option value="2013">2013</option>
-                    <option value="2012">2012</option>
-                    <option value="2011">2011</option>
-                    <option value="2010">2010</option>
-                    <option value="2009">2009</option>
-                    <option value="2008">2008</option>
-                    <option value="20007">2007</option>
-                    <option value="2006">2006</option>
-                    <option value="2005">2005</option>
-                    <option value="2004">2004</option>
-                    <option value="2003">2003</option>
-                    <option value="2002">2002</option>
-                    <option value="2001">2001</option>
-                    <option value="2000">MenorAño-2000</option>
-                </select>
-                <div class="custom-select-wrapper">
-    <div class="custom-select-trigger" onclick="toggleDropdown()">
-        <span id="selected-text">Seleccionar Marca</span>
-        <div class="arrow"></div>
-    </div>
-
-    <ul class="custom-options" id="options-list">
-        <li onclick="selectOption('Toyota', 'img/TOYOTA.svg')">
-            <img src="img/TOYOTA.svg" alt="Toyota"> Toyota
-        </li>
-        <li onclick="selectOption('Ford', 'img/FORD.svg')">
-            <img src="img/FORD.svg" alt="Ford"> Ford
-        </li>
-        <li onclick="selectOption('Volkswagen', 'img/VOLKSWAGEN.svg')">
-            <img src="img/VOLKSWAGEN.svg" alt="VW"> Volkswagen
-        </li>       
-        <li onclick="selectOption('Nissan', 'img/NISSAN.svg')">
-            <img src="img/NISSAN.svg" alt="Nissan"> Nissan
-        </ul>
+<!--Inicio cotizador-->
+<div class="card-cotizador">
+    <h2>Conoce el valor de tu auto.</h2>
+    <p>¡Despreocupate! Encuentra la mejor tasación para tu auto con CarroQhatu.</p>
     
-    <input type="hidden" id="marca-seleccionada" name="marca">
-</div>
-                <input type="text" id="marca" list="marcas-list" class="input-cotizar" placeholder="Marca">                
-                <datalist id="marcas-list">
-                    <option value="Toyota">
-                    <option value="Ford">
-                    <option value="Volkswagen">
-                    <option value="Nissan">
-                    <option value="Chevrolet">
-                    <option value="Honda">
-                    <option value="Hyundai">
-                    <option value="Kia">
-                    <option value="Mazda">
-                    <option value="Renault">                        
-                    <option value="Peugeot">  
-                    <option value="Susuki">
-                    <option value="Daihatsu">                    
-                    <option value="Mitsubishi">                        
-                    <option value="MG">  
-                    <option value="Audi"> 
-                    <option value="BMW"> 
-                    <option value="Chery"> 
-                    <option value="Chrysler"> 
-                    <option value="Citroen"> 
-                    <option value="Dodge">                        
-                    <option value="Fiat"> 
-                    <option value="Geely"> 
-                    <option value="GMC"> 
-                    <option value="Jeep"> 
-                    <option value="Lexus">  
-                    <option value="Subaru">
-                    <option value="Volvo">                        
-                    <option value="Otra marca...">                      
-                </datalist>
-                <input type="text" id="modelo" class="input-cotizar" placeholder="Modelo">
-
-                <button onclick="enviarWhatsApp()" class="btn-cotizar">Cotizar auto</button>
+    <div class="form-grid">
+        <div class="input-group" id="group-year">
+            <label class="floating-label">Año</label>
+            <div class="trigger" onclick="toggleMenu('year')">
+                <span id="label-year">Seleccionar</span>
+                <div class="chevron"></div>
             </div>
+            <ul class="dropdown-menu" id="menu-year">
+                <li onclick="selectItem('year', '2025')">2025</li>
+                <li onclick="selectItem('year', '2024')">2024</li>
+                <li onclick="selectItem('year', '2023')">2023</li>
+                <li onclick="selectItem('year', '2022')">2022</li>
+                <li onclick="selectItem('year', '2021')">2021</li>
+                <li onclick="selectItem('year', '2020')">2020</li>
+                <li onclick="selectItem('year', '2019')">2019</li>
+                <li onclick="selectItem('year', '2018')">2018</li>
+                <li onclick="selectItem('year', '2017')">2017</li>
+                <li onclick="selectItem('year', '2016')">2016</li>
+                <li onclick="selectItem('year', '2015')">2015</li>
+                <li onclick="selectItem('year', '2014')">2014</li>
+                <li onclick="selectItem('year', '2013')">2013</li>
+                <li onclick="selectItem('year', '2012')">2012</li>
+                <li onclick="selectItem('year', '2011')">2011</li>
+                <li onclick="selectItem('year', '2010')">2010</li>
+                <li onclick="selectItem('year', '2009')">2009</li>
+                <li onclick="selectItem('year', '2008')">2008</li>
+                <li onclick="selectItem('year', '2007')">2007</li>
+                <li onclick="selectItem('year', '2006')">2006</li>
+                <li onclick="selectItem('year', '2005')">2005</li>
+                <li onclick="selectItem('year', '2004')">2004</li>
+                <li onclick="selectItem('year', '2003')">2003</li>
+                <li onclick="selectItem('year', '2002')">2002</li>
+                <li onclick="selectItem('year', '2001')">2001</li>
+                <li onclick="selectItem('year', 'MenosAño-2000')">2000</li>
+            </ul>
         </div>
-        <div class="custom-select-wrapper">
-  
-        <script>
-        function enviarWhatsApp() {
-            const year = document.getElementById('year').value;
-            const marca = document.getElementById('marca').value;
-            const modelo = document.getElementById('modelo').value;
-            const telefono = "123456789"; // Tu número de teléfono sin el +
 
-            if(!year || !marca || !modelo) {
-                alert("Por favor, completa todos los campos");
-                return;
-            }
+        <div class="input-group" id="group-brand">
+            <label class="floating-label">Marca</label>
+            <div class="trigger" onclick="toggleMenu('brand')">
+                <span id="label-brand">Seleccionar</span>
+                <div class="chevron"></div>
+            </div>
+            <ul class="dropdown-menu" id="menu-brand">
+                <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/toyota-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/toyota-logo.png"> Toyota
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/nissan-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/nissan-logo.png"> Nissan
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/hyundai-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/hyundai-logo.png"> Hyundai
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/ford-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/ford-logo.png"> Ford
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/volkswagen-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/volkswagen-logo.png"> Volkswagen
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/chevrolet-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/chevrolet-logo.png"> Chevrolet
+                </li>
+                <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/honda-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/honda-logo.png"> Honda
+                </li>
+                <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/haval-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/haval-logo.png"> Haval
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/kia-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/kia-logo.png"> Kia
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/mazda-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/mazda-logo.png"> Mazda
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/bmw-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/bmw-logo.png"> BMW
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/renault-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/renault-logo.png"> Renault
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/hyundai-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/peugeot-logo.png"> Peugeot
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/suzuki-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/suzuki-logo.png"> Suzuki
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/daihatsu-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/daihatsu-logo.png"> Daihatsu
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/mitsubishi-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/mitsubishi-logo.png"> Mitsubishi
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/mg-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/mg-logo.png"> MG
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/audi-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/audi-logo.png"> Audi
+                </li>
+                <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/changan-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/changan-logo.png"> Changan
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/chery-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/chery-logo.png"> Chery
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/chrysler-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/chrysler-logo.png"> Chrysler
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/citroen-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/citroen-logo.png"> Citroen
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/dodge-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/dodge-logo.png"> Dodge
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/fiat-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/fiat-logo.png"> Fiat
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/geely-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/geely-logo.png"> Geely
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/gmc-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/gmc-logo.png"> GMC
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/jeep-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/jeep-logo.png"> Jeep
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'https://www.carlogos.org/car-logos/lexus-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/lexus-logo.png"> Lexus
+                </li>
+                <li onclick="selectItem('brand', 'Hyundai', 'https://www.carlogos.org/car-logos/subaru-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/subaru-logo.png"> Subaru
+                </li>
+                  <li onclick="selectItem('brand', 'Toyota', 'https://www.carlogos.org/car-logos/volvo-logo.png')">
+                    <img src="https://www.carlogos.org/car-logos/volvo-logo.png"> Volvo
+                </li>
+                <li onclick="selectItem('brand', 'Nissan', 'img/otramarca.svg')">
+                    <img src="img/otramarca.svg"> Tengo otra marca...
+                </li>
+            </ul>
+        </div>
 
-            const mensaje = `Hola! Quiero cotizar mi auto:%0A- Año: ${year}%0A- Marca: ${marca}%0A- Modelo: ${modelo}`;
-            const url = `https://wa.me/${telefono}?text=${mensaje}`;
-            
-            window.open(url, '_blank');
-        }
-        </script>
-        <script>
-            function toggleDropdown() {
-            document.getElementById('options-list').classList.toggle('open');
-        }
+        <div class="input-group" id="group-model">
+            <label class="floating-label">Modelo</label>
+            <input type="text" 
+                    id="input-model" 
+                    class="text-input" 
+                    placeholder="Ej: Hilux" 
+                    oninput="validarFormulario()" 
+                    onfocus="setActive('model')" 
+                    onblur="removeActive('model')">
+        </div>
 
-        function selectOption(nombre, logoUrl) {
-            // Actualizar el texto e imagen del trigger
-            const trigger = document.getElementById('selected-text');
-            trigger.innerHTML = `<img src="${logoUrl}" style="width:20px; margin-right:10px;"> ${nombre}`;
-            
-            // Guardar el valor en el input oculto
-            document.getElementById('marca-seleccionada').value = nombre;
-            
-            // Cerrar el menú
-            toggleDropdown();
-        }
+        <button id="btn-enviar" class="btn-cotizar" onclick="enviarWS()">
+            Cotizar auto
+        </button>
+    </div>
+</div>
+<!-- Final cotizador-->
 
-        // Cerrar si el usuario hace clic fuera del menú
-        window.onclick = function(event) {
-            if (!event.target.closest('.custom-select-wrapper')) {
-                document.getElementById('options-list').classList.remove('open');
-            }
-        }
-        </script>
+ <!--Sección serviciosventa-->
 
-
-
-
-
-        <!--fin seccion cotiszadcion-->
-
-
-
+ <!--Fin sección serviciosventa-->
     <!-- Services Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5">Our Services</h1>
+             <section class="pasos-venta">
+                <h2 class="titulo-seccion">Con
+                    <span>CarroQhatu</span> 
+                    es fácil vender tu auto. ¡Descúbrelo!
+                </h2>
+                
+                <div class="cards-ventacontainer">
+                    <div class="card-venta">
+                        <div class="icon-box">💰</div>
+                        <h3>Cotiza tu Auto</h3>
+                        <p>Completa los datos online y recibe una tasación preliminar GRATIS al instante. ¡Descubre el valor real en minutos!</p>
+                    </div>
+                    <div class="card-venta destacada">
+                        <div class="icon-box">🔍</div>
+                        <h3>Inspección Certificada</h3>
+                        <p>Agenda una cita. Nuestros expertos revisan tu auto GRATIS. Obten el certificado para vender con total confianza.</p>                        
+                    </div>
+
+                    <div class="card-venta">
+                        <div class="icon-box">📢</div>
+                        <h3>Publicación Total</h3>
+                        <p>Difundimos tu vehículo en los portales más grandes (Marketplace, etc). ¡Llegamos a miles de compradores por ti!</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <h1 class="title-servicioventa">Con CarroQhatu es fácil vender tu auto. ¡Descubrelo!</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-2">
                     <div class="service-item d-flex flex-column justify-content-center px-4 mb-4">
@@ -411,6 +404,86 @@
         </div>
     </div>
     <!-- Vendor End -->
+<!--Script menu cotizacion-->
+<script>
+   let data = { year: '', brand: '', model: '' };
+
+    function toggleMenu(type) {
+        const menu = document.getElementById(`menu-${type}`);
+        const group = document.getElementById(`group-${type}`);
+        
+        // Si el menú ya está abierto, lo cerramos y salimos
+        if (menu.classList.contains('show')) {
+            closeAllMenus();
+            return;
+        }
+
+        // Si no, cerramos otros y abrimos este
+        closeAllMenus();
+        menu.classList.add('show');
+        group.classList.add('active');
+    }
+
+    function closeAllMenus() {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
+        document.querySelectorAll('.input-group').forEach(g => g.classList.remove('active'));
+    }
+
+    function selectItem(type, value, logo = null) {
+        data[type] = value;
+        const label = document.getElementById(`label-${type}`);
+        
+        if(logo) {
+            label.innerHTML = `<img src="${logo}" style="width:20px; margin-right:8px; vertical-align:middle;"> ${value}`;
+        } else {
+            label.innerText = value;
+        }
+        
+        // CERRAMOS AUTOMÁTICAMENTE
+        closeAllMenus();
+        validarFormulario();
+    }
+
+    function validarFormulario() {
+        const btn = document.getElementById('btn-enviar');
+        const modelVal = document.getElementById('input-model').value;
+        
+        data.model = modelVal;
+
+        // Validación: que año y marca no estén vacíos y el modelo tenga más de 2 letras
+        if (data.year !== '' && data.brand !== '' && data.model.trim().length > 2) {
+            btn.classList.add('btn-ready');
+        } else {
+            btn.classList.remove('btn-ready');
+        }
+    }
+
+    function setActive(id) { 
+        closeAllMenus(); // Opcional: cerrar menús si vas a escribir
+        document.getElementById(`group-${id}`).classList.add('active'); 
+    }
+
+    function removeActive(id) { 
+        document.getElementById(`group-${id}`).classList.remove('active'); 
+    }
+
+    function enviarWS() {
+        if (!document.getElementById('btn-enviar').classList.contains('btn-ready')) {
+            alert("Por favor, completa todos los campos correctamente.");
+            return;
+        }
+        const tel = "51900000000";
+        const msg = `Hola CarroQhatu!%0AQuiero cotizar mi auto:%0A- Año: ${data.year}%0A- Marca: ${data.brand}%0A- Modelo: ${data.model}`;
+        window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
+    }
+
+    // Cerrar al hacer clic fuera
+    window.onclick = function(e) {
+        if (!e.target.closest('.input-group')) {
+            closeAllMenus();
+        }
+    }
+</script>
 
 
      <!--INICIO FOOTER-->

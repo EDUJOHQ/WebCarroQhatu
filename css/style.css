@@ -302,6 +302,15 @@ h6,
     background: linear-gradient(to bottom, transparent 95%, rgba(0, 0, 0, 0.8) 100%);
     pointer-events: none;
 }
+.banner-overlayventa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 95%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none;
+}
 .title-servicioscompra{
     padding-top: 6vw;
 }
@@ -555,177 +564,229 @@ h6,
     filter: drop-shadow(0 20px 6px rgba(0,0,0,0.2));
 }
 
-/*page vende tu auto - cotizacion*/.custom-select-wrapper {
-    position: relative; /* Clave para que la lista se pegue aquí */
-    width: 250px;
-    font-family: sans-serif;
-}
 
-.custom-select-trigger {
-    background: #fff;
-    padding: 12px 15px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/*page vende tu auto - cotizacion*/ 
+/* Contenedor Principal */
+        .card-cotizador {
+            background:#ffffff;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 50px auto;     
+            margin-top: -37vw;
+            position: relative;
+        }
 
-/* La lista que estaba fallando en tu imagen */
-.custom-options {
-    position: absolute;
-    top: 100%; /* Se posiciona justo debajo del trigger */
-    left: 0;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 5px;
-    max-height: 250px;
-    overflow-y: auto;
-    z-index: 1000;
-    display: none; /* Oculta por defecto */
-    list-style: none;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+        .card-cotizador h2 { margin: 0 0 10px 0; font-size: 40px; color: #303030; }
+        .card-cotizador p { margin: 0 0 30px 0; color: #3E4A5B; }
 
-.custom-options.open {
-    display: block; /* Se muestra al hacer clic */
-}
+        /* Grid de Inputs */
+        .form-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
 
-.custom-options li {
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
+        /* Estilo Base del Grupo de Input */
+        .input-group {
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+            height: 56px;
+            background: rgb(248, 248, 248);
+            border: 1px solid #cbd5e0;
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
 
-.custom-options li:hover {
-    background: #fff3cd; /* Color amarillento suave de tu marca */
-}
+        .input-group.active { border: 2px solid #FBD333; }
 
-/* Tamaño de los logos */
-.custom-options li img {
-    width: 50px;
-    height: 50px;
-    margin-right: 12px;
-    object-fit: contain;
-} /*-----------------------*/
-/* Contenedor principal (la tarjeta blanca) */
-.card-cotizador {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave */
-    max-width: 900px;
-    margin: 20px auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: -35vw;
-    position: relative;
-    width: auto;
-    padding: 30px;
-}
-.card-cotizador h2 {
-    margin-top: 0;
-    color: #1a202c;
-    font-size: 24px;
-}
+        /* Etiqueta Flotante (Kavak Style) */
+        .floating-label {
+            position: absolute;
+            top: -10px;
+            left: 12px;
+            background: white;
+            padding: 0 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #303030;
+            z-index: 10;
+        }
 
-.card-cotizador p {
-    color: #4a5568;
-    margin-bottom: 25px;
-}
+        /* Trigger del Dropdown y Input de Texto */
+        .trigger, .text-input {
+            width: 100%;
+            height: 100%;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #303030;
+            border: none;
+            background: transparent;
+            outline: none;
+        }
 
-/* Contenedor de los inputs */
-.form-container {
-    display: flex;
-    gap: 15px; /* Espacio entre campos */
-    flex-wrap: wrap; /* Permite que bajen si no caben */
-}
+        /* Icono de Flecha */
+        .chevron::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #b7b8b5;
+            border-bottom: 2px solid #b7b8b5;
+            transform: rotate(45deg);
+            transition: 0.3s;
+        }
+        .active .chevron::after { 
+            transform: rotate(-135deg); 
+            border-color: #FBD333;
+        }
 
-/* Estilo para los inputs y el select */
-.input-cotizar {
-    flex: 1; /* Hace que todos crezcan igual */
-    min-width: 150px;
-    padding: 12px 15px;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-}
+        /* Listas Desplegables (Siempre abajo) */
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #d6c57f;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin: 0;
+            padding: 8px 0;
+            list-style: none;
+            max-height: 250px;
+            overflow-y: auto;
+            display: none;
+            color: #777777;
+            z-index: 1000;
+        }
+        .dropdown-menu.show { display: block; }
 
-.input-cotizar:focus {
-    border-color: #3182ce; /* Color azul al hacer clic */
-}
-
-/* Estilo del Botón */
+        .dropdown-menu li {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .dropdown-menu li:hover { background: #e3e8f5; color: #000000; }
+        .dropdown-menu li img { width: 35px; height: 35px; margin-right: 12px; object-fit: contain; }    
+/* Botón "desactivado" (Gris) */
 .btn-cotizar {
-    background-color: #edf2f7; /* Gris claro como la imagen */
-    color: #2d3748;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-cotizar:hover {
     background-color: #e2e8f0;
+    color: #a0aec0;
+    border: none;
+    height: 56px;
+    padding: 0 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: not-allowed; 
+    transition: all 0.4s ease;
+    width: 200px;
 }
 
-/* Ajustes para Celulares */
-@media (max-width: 600px) {
-    .form-container {
-        flex-direction: column; /* Se ponen uno arriba del otro */
-    }
-    
-    .btn-cotizar {
-        width: 100%;
-    }
+/* Botón "Activado" (Cuando todo está lleno) */
+.btn-ready {
+    background-color: #FBD333 !important; /* Azul Kavak */
+    color: rgb(0, 0, 0) !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 14px rgba(54, 98, 241, 0.4);
 }
-/*fin page vende tu auto - cotizacion*/
-.cotizacioncontent{
+.btn-ready:hover {
+    transform: translateY(-2px);
+}
+/**/
+.pasos-venta {
+ padding: 60px 20px;
+ max-width: 1200px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.titulo-seccion{
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #0e1118;
+}
+
+.titulo-seccion span{
+    color: #B70021
+}
+
+.cards-ventacontainer{
     display: flex;
-    justify-content:space-between; 
-    flex-direction: column;
-    margin-top: -35vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    padding-left: 2vw;
-    position: relative;
-    width: auto;
-    background: #ffffff;
-    border-radius: 20px;
+    gap:20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-venta{
+    background: rgb(247, 247, 247) ;
+    border-radius: 4px;
     padding: 30px;
-    box-shadow: 0px 12px 30px rgba(0,0,0,0.1);  
+    flex: 1;    
+    min-width: 260px;
+    max-width: 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #eeeeee;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.titlecotiza{
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #333333;
+
+.card-venta:hover {
+    transform: translateY(-10px);
 }
-.descripcotiza{
-    font-size: 1.2em;
-    color: #424242;
+
+/* El círculo del icono */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #f7fafc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
     margin-bottom: 20px;
 }
-.campos-busqueda{
-    display: flex;    
-    align-items: center;
+
+.card-venta h3 {
+    font-size: 20px;
+    color: #292929;
+    margin-bottom: 15px;
 }
-.dropdown{
-    flex-grow: 1;
+
+.card-venta p {
+    font-size: 14px;
+    color: #29323f;
+    line-height: 1.6;
 }
-.custom-select{
-    border-radius: 4px;
-    cursor: pointer;
-    background: #ffffff;
-}
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-paso {
+        width: 100%;
+        max-width: 100%;
+    }
+}  
+
+/*fin page vende tu auto - cotizacion*/
+
+
 
 /* ====================== */
 /*   SECCIÓN BENEFICIOS   */
