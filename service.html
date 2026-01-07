@@ -74,18 +74,18 @@
     <!-- Banner Principal Inicio -->
             <section class="banner-video-container">
                 <video class="banner-video" autoplay muted loop playsinline>
-                    <source src="img/bannerprincipal3.mp4" type="video/mp4">
+                    <source src="img/bannervende.mp4" type="video/mp4">
                 </video>
                 <div class="banner-overlay">
                 </div>
             </section>
     <!-- Banner Principal Final -->
 
-        <!-- barra busqueda cotización-->
+        <!-- barra busqueda c
                     <div class="cotizacioncontent">
                         <div class="cotizacion-barras">
                             <h1 class="titlecotiza">Conoce el valor de tu auto</h1><p></p>
-                            <p class="descripcotiza">Encuentra la mejor tasación para tu auto y descubre las ofertas que tenemos para ti</p>                        
+                            <p class="descripcotiza">Encuentra la mejor tasación para tu auto y descubre las ofertas que tenemos para ti!</p>                        
                             <div class="campos-busqueda">
                                  <div class="dropdown">
                                     <select name="select-año" class="custom-select" id="seleccion-año">
@@ -131,6 +131,154 @@
                         </div>   
                     </div>
         <!-- fin barra busqueda cotización-->
+
+
+        <!--seccion cotizacion-->
+        <div class="card-cotizador">
+            <h2>Cotizá y vendé tu auto en 1 día</h2>
+            <p>¡Olvidate de la burocracia! Vendé online o cambialo por un auto con beneficios exclusivos.</p>
+            
+            <div class="form-container">
+                <select id="year" class="input-cotizar">
+                    <option value="">Año</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="20007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">MenorAño-2000</option>
+                </select>
+                <div class="custom-select-wrapper">
+    <div class="custom-select-trigger" onclick="toggleDropdown()">
+        <span id="selected-text">Seleccionar Marca</span>
+        <div class="arrow"></div>
+    </div>
+
+    <ul class="custom-options" id="options-list">
+        <li onclick="selectOption('Toyota', 'img/TOYOTA.svg')">
+            <img src="img/TOYOTA.svg" alt="Toyota"> Toyota
+        </li>
+        <li onclick="selectOption('Ford', 'img/FORD.svg')">
+            <img src="img/FORD.svg" alt="Ford"> Ford
+        </li>
+        <li onclick="selectOption('Volkswagen', 'img/VOLKSWAGEN.svg')">
+            <img src="img/VOLKSWAGEN.svg" alt="VW"> Volkswagen
+        </li>       
+        <li onclick="selectOption('Nissan', 'img/NISSAN.svg')">
+            <img src="img/NISSAN.svg" alt="Nissan"> Nissan
+        </ul>
+    
+    <input type="hidden" id="marca-seleccionada" name="marca">
+</div>
+                <input type="text" id="marca" list="marcas-list" class="input-cotizar" placeholder="Marca">                
+                <datalist id="marcas-list">
+                    <option value="Toyota">
+                    <option value="Ford">
+                    <option value="Volkswagen">
+                    <option value="Nissan">
+                    <option value="Chevrolet">
+                    <option value="Honda">
+                    <option value="Hyundai">
+                    <option value="Kia">
+                    <option value="Mazda">
+                    <option value="Renault">                        
+                    <option value="Peugeot">  
+                    <option value="Susuki">
+                    <option value="Daihatsu">                    
+                    <option value="Mitsubishi">                        
+                    <option value="MG">  
+                    <option value="Audi"> 
+                    <option value="BMW"> 
+                    <option value="Chery"> 
+                    <option value="Chrysler"> 
+                    <option value="Citroen"> 
+                    <option value="Dodge">                        
+                    <option value="Fiat"> 
+                    <option value="Geely"> 
+                    <option value="GMC"> 
+                    <option value="Jeep"> 
+                    <option value="Lexus">  
+                    <option value="Subaru">
+                    <option value="Volvo">                        
+                    <option value="Otra marca...">                      
+                </datalist>
+                <input type="text" id="modelo" class="input-cotizar" placeholder="Modelo">
+
+                <button onclick="enviarWhatsApp()" class="btn-cotizar">Cotizar auto</button>
+            </div>
+        </div>
+        <div class="custom-select-wrapper">
+  
+        <script>
+        function enviarWhatsApp() {
+            const year = document.getElementById('year').value;
+            const marca = document.getElementById('marca').value;
+            const modelo = document.getElementById('modelo').value;
+            const telefono = "123456789"; // Tu número de teléfono sin el +
+
+            if(!year || !marca || !modelo) {
+                alert("Por favor, completa todos los campos");
+                return;
+            }
+
+            const mensaje = `Hola! Quiero cotizar mi auto:%0A- Año: ${year}%0A- Marca: ${marca}%0A- Modelo: ${modelo}`;
+            const url = `https://wa.me/${telefono}?text=${mensaje}`;
+            
+            window.open(url, '_blank');
+        }
+        </script>
+        <script>
+            function toggleDropdown() {
+            document.getElementById('options-list').classList.toggle('open');
+        }
+
+        function selectOption(nombre, logoUrl) {
+            // Actualizar el texto e imagen del trigger
+            const trigger = document.getElementById('selected-text');
+            trigger.innerHTML = `<img src="${logoUrl}" style="width:20px; margin-right:10px;"> ${nombre}`;
+            
+            // Guardar el valor en el input oculto
+            document.getElementById('marca-seleccionada').value = nombre;
+            
+            // Cerrar el menú
+            toggleDropdown();
+        }
+
+        // Cerrar si el usuario hace clic fuera del menú
+        window.onclick = function(event) {
+            if (!event.target.closest('.custom-select-wrapper')) {
+                document.getElementById('options-list').classList.remove('open');
+            }
+        }
+        </script>
+
+
+
+
+
+        <!--fin seccion cotiszadcion-->
+
+
 
     <!-- Services Start -->
     <div class="container-fluid py-5">

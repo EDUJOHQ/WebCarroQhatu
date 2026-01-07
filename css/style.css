@@ -555,6 +555,139 @@ h6,
     filter: drop-shadow(0 20px 6px rgba(0,0,0,0.2));
 }
 
+/*page vende tu auto - cotizacion*/.custom-select-wrapper {
+    position: relative; /* Clave para que la lista se pegue aquí */
+    width: 250px;
+    font-family: sans-serif;
+}
+
+.custom-select-trigger {
+    background: #fff;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* La lista que estaba fallando en tu imagen */
+.custom-options {
+    position: absolute;
+    top: 100%; /* Se posiciona justo debajo del trigger */
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none; /* Oculta por defecto */
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.custom-options.open {
+    display: block; /* Se muestra al hacer clic */
+}
+
+.custom-options li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-options li:hover {
+    background: #fff3cd; /* Color amarillento suave de tu marca */
+}
+
+/* Tamaño de los logos */
+.custom-options li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    object-fit: contain;
+} /*-----------------------*/
+/* Contenedor principal (la tarjeta blanca) */
+.card-cotizador {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave */
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -35vw;
+    position: relative;
+    width: auto;
+    padding: 30px;
+}
+.card-cotizador h2 {
+    margin-top: 0;
+    color: #1a202c;
+    font-size: 24px;
+}
+
+.card-cotizador p {
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+/* Contenedor de los inputs */
+.form-container {
+    display: flex;
+    gap: 15px; /* Espacio entre campos */
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+}
+
+/* Estilo para los inputs y el select */
+.input-cotizar {
+    flex: 1; /* Hace que todos crezcan igual */
+    min-width: 150px;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-cotizar:focus {
+    border-color: #3182ce; /* Color azul al hacer clic */
+}
+
+/* Estilo del Botón */
+.btn-cotizar {
+    background-color: #edf2f7; /* Gris claro como la imagen */
+    color: #2d3748;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-cotizar:hover {
+    background-color: #e2e8f0;
+}
+
+/* Ajustes para Celulares */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column; /* Se ponen uno arriba del otro */
+    }
+    
+    .btn-cotizar {
+        width: 100%;
+    }
+}
+/*fin page vende tu auto - cotizacion*/
 .cotizacioncontent{
     display: flex;
     justify-content:space-between; 
