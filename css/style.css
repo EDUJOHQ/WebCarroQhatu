@@ -704,85 +704,128 @@ h6,
     transform: translateY(-2px);
 }
 /**/
-.pasos-venta {
- padding: 60px 20px;
- max-width: 1200px;
- margin: 0 auto;
- text-align: center;
+
+/*-----------------------------------*/
+:root {
+    --rojo-carroqhatu: #B70021;
+    --amarillo-carroqhatu: #FBD333;
+    --gris-texto: #4a5568;
+    --bg-suave: #f8fafc;
 }
 
-.titulo-seccion{
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #0e1118;
+.contenedor-pasos {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
-.titulo-seccion span{
-    color: #B70021
+.titulo-principal {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #1a202c;
 }
 
-.cards-ventacontainer{
+.titulo-principal span { 
+    color: var(--rojo-carroqhatu); 
+    background: var(--amarillo-carroqhatu);
+    border-radius: 7px;
+}
+
+.grid-cards {
     display: flex;
-    gap:20px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.card-venta{
-    background: rgb(247, 247, 247) ;
-    border-radius: 4px;
-    padding: 30px;
-    flex: 1;    
+.card-venta {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 25px;
+    flex: 1;
     min-width: 260px;
     max-width: 280px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    border: 1px solid #eeeeee;
-    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
     position: relative;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
+}
+
+/* EFECTO DE DELINEADO AL PASAR EL MOUSE */
+.card-venta::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.card-venta:hover::after {
+    border-color: var(--amarillo-carroqhatu);
+    transform: scale(1.02);
 }
 
 .card-venta:hover {
     transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* El círculo del icono */
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: #f7fafc;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
+/* Iconos */
+.icono-wrapper {
+    width: 70px;
+    height: 70px;
     margin-bottom: 20px;
 }
 
+.icono-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .card-venta h3 {
-    font-size: 20px;
-    color: #292929;
+    font-size: 19px;
     margin-bottom: 15px;
+    color: #2d3748;
 }
 
 .card-venta p {
     font-size: 14px;
-    color: #29323f;
+    color: var(--gris-texto);
     line-height: 1.6;
 }
-/* Ajuste para celulares */
+
+/* Estilo para la Card Destacada (Inspección) */
+.card-venta.destacada {
+    background-color: #f0f4ff; /* Un tono azul muy suave */
+    border-color: var(--azul-kavak);
+}
+
+.tag-recomendado {
+    position: absolute;
+    top: -12px;
+    background: var(--amarillo-qhatu);
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card-paso {
-        width: 100%;
-        max-width: 100%;
-    }
-}  
+    .grid-cards { flex-direction: column; align-items: center; }
+    .card-venta { max-width: 90%; }
+}
+/*-----------------------------------*/
 
 /*fin page vende tu auto - cotizacion*/
 
