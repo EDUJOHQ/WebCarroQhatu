@@ -61,7 +61,7 @@
     </div> Topbar End -->  
      <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
-        <div class="position-relative px-lg-0" style="z-index: 9;" >
+        <div class="position-relative px-lg-1" style="z-index: 1000;" >
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
                     <img class="imglogo" src="img/CarroQhatuL.png" href="index.html" alt="Logo">
@@ -76,7 +76,15 @@
                         </a>
                         <a href="about.html" class="nav-item nav-link">Compra un auto</a>
                         <a href="service.html" class="nav-item nav-link">Vende tu auto</a>            
-                        <a href="testimonial.html" class="nav-item nav-link">Nosotros</a> 
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="team.html" class="dropdown-item">Conócenos</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonios</a>
+                                <a href="team.html" class="dropdown-item">Blog</a>
+                                <a href="contact.html" class="dropdown-item">Contáctos</a>                        
+                            </div>
+                        </div> 
                         </div class="nav-item ml-lg-3">
                             <a href="contact.html" class="btn-contacto">
                                 Contáctanos<i class="fa fa-headset"></i>
@@ -192,6 +200,9 @@
             </div>
         </section>
         <!-- FINAL 3 CARDS INICIALES -->
+
+
+
         <h2 class="title-mv titulo-linea title-videos">
           <span></span>
         </h2>
@@ -199,7 +210,7 @@
             <div class="container pt-5 pb-3">        
                 <div class="row justify-content-center">
                     <div class="col-lg-20 text-center">
-                        <img class="w-75 mb-4" src="img/about.png" alt="">                    
+                        <img class="imgcarrosabout" src="img/about.png" alt="">                    
                         <h4 class="questionsection">¿Listo para encontrar tu compañero de ruta?</h4>
                         <h2 class="textsection">Explora nuestro inventario de vehículos verificados o solicita una inspección para el auto que tienes visto.</h2>                                    
                     </div>            
@@ -218,20 +229,18 @@
         <span></span>
         </h2>
         <!-- FILA SUPERIOR (IZQUIERDA) -->
-        <section class="testimonios">
-        <div class="testimonios-viewport">
-            <div class="testimonios-track izq">
+        <section class="comentarios-izq">
+        <div class="testimonios-content">
+            <div class="testimoniosdirec izq">
 
             <!-- GRUPO 1 -->
-            <div class="testimonios-group">
+            <div class="grupo-testi">
                 <img class="carousel-icon" src="img/VOLKSWAGEN.svg">
                 <img class="carousel-icon" src="img/TOYOTA.svg">
                 <img class="carousel-icon" src="img/RENAULT.svg">
                 <img class="carousel-icon" src="img/HYUNDAI.svg">
                 <img class="carousel-icon" src="img/mazda.svg">
-                <img class="carousel-icon" src="img/HONDA.svg">         
-            <!-- GRUPO 2 (DUPLICADO EXACTO) -->
-            <div class="testimonios-group">                  
+                <img class="carousel-icon" src="img/HONDA.svg">  
                 <img class="carousel-icon" src="img/FORD.svg">  
                 <img class="carousel-icon" src="img/KIA.svg">  
                 <img class="carousel-icon" src="img/susuki.svg">
@@ -240,8 +249,7 @@
                 <img class="carousel-icon" src="img/nissan.svg">  
                 <img class="carousel-icon" src="img/lexus.svg">
                 <img class="carousel-icon" src="img/chevrolet.svg">
-                <img class="carousel-icon" src="img/subaru.svg">         
-            </div>                         
+                <img class="carousel-icon" src="img/subaru.svg">                            
         </section>
     <!-- FIN MARCAS CAROUSEL -->
      <!-- Footer Start 

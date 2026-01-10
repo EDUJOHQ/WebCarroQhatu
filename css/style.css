@@ -1,3 +1,42 @@
+/* =========================
+   RESET + BASE RESPONSIVE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden; /* MATA el scroll horizontal */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Imágenes SIEMPRE responsivas */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.imgcarrosabout{
+    margin: auto;
+}
+
+
+/* Evita desbordes raros */
+section,
+div {
+  max-width: 100%;
+}
 /********** Template CSS **********/
 :root {
     --primary: #f3a826;
@@ -902,11 +941,7 @@ h6,
 }
 
 /*-----------------------------------*/
-.testimonios {
-    padding: 60px 20px;
-    background: #fff;
-    text-align: center;
-}
+
 .titulo-principal2 {
     font-size: 32px;
     font-weight: 800;
@@ -920,41 +955,27 @@ h6,
     background: var(--amarillo-carroqhatu);
     border-radius: 7px;
 }
-
-.testimonios h2 {
+.clientesventa h2 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
 }
 
-.testimonios-grid {
-    max-width: 1100px;
+.clientesventa-grid {
+    max-width: 1000px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 25px;
-}
-
-.testimonio-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    text-align: left;
-}
-
-.perfil {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
 }
-
-.perfil img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
+.clientesventa-card{
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    flex: 1;
+    margin: 0 7px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.clientesventa-card p{
+    color:#1B2532;
 }
 
 .perfil h3 {
@@ -978,12 +999,6 @@ h6,
     color: #000;
     font-size: 14px;
     margin-left: 8px;
-}
-
-.testimonio-card p {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.6;
 }
 /*----------------------------------------*/
 /*fin page vende tu auto - cotizacion*/
@@ -1109,6 +1124,7 @@ h6,
 .title-mv {
     font-size: 39px;
     margin-bottom: 25px;
+    color:#1b1b1b;
 }
 .subtitle-mv {
     font-size: 25px;
@@ -1125,6 +1141,10 @@ h6,
     flex: 1;
     height: 2px;
     background: #FBD333;
+}
+.title-exploracatalog{
+    color:#1b1b1b;
+    padding: 5vw
 }
 
 .linesubtitle p{ 
@@ -1882,6 +1902,8 @@ a:hover {
   right: 12px;
   font-size: 26px;
   color: white;
+  background: none;
+  border: none;
   cursor: pointer;
   z-index: 10;
 }
@@ -1894,92 +1916,135 @@ a:hover {
 
 
 /*COMENTARIOS 2*/
-/* CONTENEDOR */
-.testimonios {
-  padding: 30px 0;
-}
+/* =========================
+   CONTENEDORES
+========================= */
 
-.testimonios-viewport {
-  overflow: hidden;
+.comentarios-izq,
+.comentarios-der {
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 15px 0;
 }
 
-/* TRACK */
-.testimonios-track {
+.testimonios-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   FILA ANIMADA
+========================= */
+
+.testimoniosdirec {
+  width: 100%;
+  overflow: hidden;
+}
+
+.grupo-testi {
   display: flex;
-  width: max-content;
-  animation: scroll-continuo 20s linear infinite;
+  flex-wrap: nowrap;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
 }
 
-.testimonios-track.der {
-  animation-direction: reverse;
+/* IZQUIERDA */
+.testimoniosdirec.izq .grupo-testi {
+  animation: Coment-left 25s linear infinite;
 }
 
-/* PAUSA AL HOVER */
-.testimonios-viewport:hover .testimonios-track {
+/* DERECHA */
+.testimoniosdirec.der .grupo-testi {
+  animation: Coment-right 25s linear infinite;
+}
+
+/* PAUSA REAL */
+.testimoniosdirec:hover .grupo-testi {
   animation-play-state: paused;
 }
 
-/* GRUPO */
-.testimonios-group {
-  display: flex;
-  gap: 20px;
+/* =========================
+   ANIMACIONES PERFECTAS
+========================= */
+
+@keyframes Coment-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-/* CARD */
+@keyframes Coment-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   CARDS (MAS PEQUEÑAS TIPO KAVAK)
+========================= */
+
 .testimonios-card {
-  width: 220px;
-  flex-shrink: 0;
+  width: 260px;          /* 👈 MÁS PEQUEÑAS */
+  min-width: 260px;
+  padding: 14px;
+  margin-right: 18px;   /* 👈 ESPACIO CONTROLADO */
   background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-/* USER */
-.user {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.user img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.user-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.user strong {
-  font-size: 15px;
-}
-
-.user span {
-  font-size: 12px;
-  color: #777;
+.testimonios-card:hover {
+  transform: translateY(-4px);
 }
 
 .testimonios-card p {
   font-size: 14px;
-  color: #5B657A;
-  line-height: 1.4;
+  color:#2d3748;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
-/* ANIMACIÓN PERFECTA */
-@keyframes scroll-continuo {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* =========================
+   USUARIO
+========================= */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
+
+.user img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color:#1a202c;
+}
+
+.user-info span {
+  font-size: 11px;
+  color: #777;
+}
+
+/*FIN COMENTARIOS*/
 
 
 /*page compraunauto*/
@@ -2866,7 +2931,9 @@ a:hover { color: #f37021; }
 /* Formulario debajo de las columnas centrales */
 .footer-form {
     display: flex;
-    max-width: 400px;
+    flex-direction: row;
+    width: 100%;
+    max-width: 20px;
 }
 
 .footer-form input {
@@ -2919,3 +2986,189 @@ a:hover { color: #f37021; }
     .social-icons, .contact-links { justify-content: center; }
 }
 /**/
+
+/* Tablets */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Laptops */
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Escritorios grandes */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.site-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+/*TODO MOBILE*/
+@media (max-width: 768px) {
+  .banner-video-container {
+    height: 55vh;
+  }
+
+  .banner-video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .icon-item p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .icon-menu,
+  .icon-menu-more {
+    width: 36px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .mv-arrow {
+    display: none;
+  }
+
+  .mv-carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .mv-card {
+    min-width: 80%;
+    scroll-snap-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .beneficios-grid,
+  .cta-grid,
+  .videos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    width: 100%;
+  }  
+}
+@media (max-width: 768px) {
+  .testimonios-card {
+    flex: 0 0 250px;
+  }
+}
+/* ===== VIDEOS MOBILE FIX ===== */
+@media (max-width: 768px) {
+  .videos-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px;
+  scroll-snap-type: x mandatory;
+}
+
+.video-card {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Modal */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.9);
+  display: none;
+  z-index: 9999;
+}
+
+.video-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-modal-content {
+  width: 95%;
+  max-width: 420px;
+  position: relative;
+}
+
+.video-modal video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+}
+
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-form input,
+  .footer-form button {
+    width: 100%;
+  }
+}
