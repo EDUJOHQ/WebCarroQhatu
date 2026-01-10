@@ -1,78 +1,75 @@
-from flask import Flask, request, jsonify, render_template
+print("Hola desde app.py")
+from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
+#from openai import OpenAI
+
+#client = OpenAI(api_key="TU_API_KEY_AQUI")
 
 app = Flask(__name__)
 CORS(app)
+#@app.route("/explicar", methods=["POST"])
+#def explicar():
+#    data = request.json
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-@app.route("/")
-def index():
-    return render_template("service.html")
+#    prompt = f"""
+#El cliente cotizó un auto con estos datos:
+
+#Marca: {data['marca']}
+#Modelo: {data['modelo']}
+#Año: {data['year']}
+#Kilómetros: {data['km']}
+# Estado: {data['estado']}
+
+# Precio estimado: entre S/. {data['min']} y S/. {data['max']}
+
+# Explícale de forma breve, clara y amigable por qué salió ese rango de precio,
+# hablando de depreciación, kilometraje y estado del vehículo.
+# """
+
+#     response = client.chat.completions.create(
+#         model="gpt-4o-mini",
+#         messages=[
+#             {"role": "system", "content": "Eres un asesor de compra de autos en Perú."},
+#             {"role": "user", "content": prompt}
+#         ],
+#         max_tokens=120
+#     )
+
+#     return jsonify({
+#         "respuesta": response.choices[0].message.content
+#     })
+    
 @app.route("/cotizar", methods=["POST"])
 def cotizar():
     data = request.json
-    year = data.get("year")
-    brand = data.get("brand")
-    model = data.get("model")
-    
-    # Lógica de cotización simulada
-    precio_base= 20000
-    if year and year.isdigit():
-        antiguedad = 2025 - int(year)
-        precio_base -= antiguedad * 500
+
+    try:
+        year = int(data["year"])
+        km = int(data["km"])
+        estado = data["estado"].lower()
+    except:
+        return jsonify({"error": "Datos inválidos"}), 400
+
+    precio_base = 50000
+    depreciacion_anual = (2025 - year) * 1500
+    depreciacion_km = (km // 10000) * 800
+
+    factor_estado = {
+        "excelente": 1.0,
+        "bueno": 0.9,
+        "regular": 0.8
+    }
+
+    precio = (precio_base - depreciacion_anual - depreciacion_km) * factor_estado.get(estado, 0.85)
 
     return jsonify({
-        "ok": True,
-        "precio_estimado": precio_base,
-        "mensaje": f"Tu {brand} {model} del {year} tiene un precio estimado de ${precio_base}"        
-    })
-    
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
-# Precios base simulados
-PRECIOS_BASE = {
-    ("toyota", "corolla"): 45000,
-    ("toyota", "hilux"): 80000,
-    ("nissan", "sentra"): 42000
-}
-
-@app.route("/tasar", methods=["POST"])
-def tasar_auto():
-    data = request.json
-
-    marca = data["marca"].lower()
-    modelo = data["modelo"].lower()
-    anio = int(data["anio"])
-    km = int(data["km"])
-    estado = data["estado"]
-
-    precio_base = PRECIOS_BASE.get((marca, modelo), 40000)
-
-    # Depreciación por año
-    antiguedad = 2025 - anio
-    precio = precio_base * (1 - 0.05 * antiguedad)
-
-    # Depreciación por kilometraje
-    km_extra = max(0, km - 20000 * antiguedad)
-    precio -= km_extra * 0.05
-
-    # Ajuste por estado
-    if estado == "excelente":
-        precio *= 1.05
-    elif estado == "regular":
-        precio *= 0.9
-
-    precio_min = round(precio * 0.95)
-    precio_max = round(precio * 1.05)
-
-    return jsonify({
-        "precio_min": precio_min,
-        "precio_max": precio_max
+        "min": round(precio * 0.95),
+        "max": round(precio * 1.05)
     })
 
 if __name__ == "__main__":
+    
     app.run(debug=True)
+    
+   

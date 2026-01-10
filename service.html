@@ -79,6 +79,8 @@
                 </div>
             </section>
     <!-- Banner Principal Final -->
+
+
 <!--Inicio cotizador-->
 <div class="card-cotizador">
     <h2>Conoce el valor de tu auto.</h2>
@@ -236,9 +238,48 @@
                     onblur="removeActive('model')">
         </div>
 
-        <button id="btn-enviar" class="btn-cotizar" onclick="enviarWS()">
-            Cotizar auto
+        <div class="input-group" id="group-km">
+            <label class="floating-label">Kilometraje</label>
+            <input type="number"
+                    id="input-km" 
+                    class="text-input" 
+                    placeholder="Ej: 85000" 
+                    oninput="validarFormulario()" 
+                    onfocus="setActive('km')" 
+                    onblur="removeActive('km')">
+        </div>
+
+        <div class="input-group" id="group-estado">
+            <label class="floating-label">Estado del Vehículo</label>
+            <div class="trigger" onclick="toggleMenu('estado')">
+                <span id="label-estado">Selecccionar</span>
+                <div class="chevron"></div>
+            </div>
+            <ul class="dropdown-menu" id="menu-estado">
+                <li onclick="selectItem('estado', 'excelente')">Excelente</li>
+                <li onclick="selectItem('estado', 'bueno')">Bueno</li>
+                <li onclick="selectItem('estado', 'regular')">Regular</li>
+            </ul>
+        </div> 
+        
+        <button id="btn-enviar" class="btn-cotizar" onclick="cotizarAuto()">
+        Cotizar auto
         </button>
+        <div id="resultado-box" style="display:none; margin-top:20px; padding:16px; border-radius:12px; background:#f4f6fb; border:1px solid #ddd;">
+            <p id="resultado-texto" style="font-size:16px; margin-bottom:10px;"></p>
+
+            <div style="display:flex; gap:10px;">
+                <button onclick="explicarIA()" style="padding:10px 14px; background:#4f46e5; color:white; border:none; border-radius:8px;">
+                    ¿Por qué este precio?
+                </button>
+
+                <button onclick="contactarAsesor()" style="padding:10px 14px; background:#10b981; color:white; border:none; border-radius:8px;">
+                    Cotizar con asesor
+                </button>
+            </div>
+
+            <div id="ia-respuesta" style="margin-top:15px; font-size:14px; color:#333;"></div>
+        </div>
     </div>
 </div>
 <!-- Final cotizador-->
@@ -438,38 +479,6 @@
         </section>
     <!-- FIN MARCAS CAROUSEL -->
 
-<!--PRUEBA FORMULARIO TASACIÓN-->
- <div class="card">
-    <h1 class="titletasacion">Conoce el valor de tu auto</h1>
-    <p class="subtitletasacion">Obtén una estimación rápida y referencial</p>
-
-    <form id="tasacionForm">
-      <label class="lblmarca">Marca</label>
-      <input type="text" name="marca" required />
-
-      <label class="lblmodelo">Modelo</label>
-      <input type="text" name="modelo" required />
-
-      <label class="lblaño">Año</label>
-      <input type="number" name="anio" min="1990" max="2025" required />
-
-      <label class="lblkm">Kilometraje</label>
-      <input type="number" name="km" required />
-
-      <label class="lblestado">Estado</label>
-      <select name="estado" required>
-        <option value="">Seleccionar</option>
-        <option value="excelente">Excelente</option>
-        <option value="bueno">Bueno</option>
-        <option value="regular">Regular</option>
-      </select>
-
-      <button type="submit">Cotizar auto</button>
-    </form>
-
-    <div id="resultado" class="resultado hidden"></div>
-  </div>
-
   <script src="script.js"></script>
 
   <style>
@@ -530,6 +539,50 @@
     .hidden {
     display: none;
     }
+    .resultado-box{
+    margin-top:20px;
+    padding:20px;
+    border-radius:12px;
+    background:#f4f6f8;
+    box-shadow:0 0 10px rgba(0,0,0,.05);
+    }
+
+    .resultado-texto{
+        font-size:18px;
+        font-weight:600;
+        margin-bottom:15px;
+    }
+
+    .resultado-botones{
+        display:flex;
+        gap:10px;
+        margin-bottom:15px;
+    }
+
+    .resultado-botones button{
+        flex:1;
+        padding:10px;
+        border:none;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    #btn-explicar{
+        background:#222;
+        color:white;
+    }
+
+    #btn-asesor{
+        background:#1ebea5;
+        color:white;
+    }
+
+    .respuesta-ia{
+        font-size:15px;
+        color:#333;
+        margin-top:10px;
+    }
+
   </style>
  <!--FIN PRUEBA FORMULARIO TASACIÓN-->
 
@@ -596,22 +649,83 @@
         document.getElementById(`group-${id}`).classList.remove('active'); 
     }
 
-    function enviarWS() {
-        if (!document.getElementById('btn-enviar').classList.contains('btn-ready')) {
-            alert("Por favor, completa todos los campos correctamente.");
-            return;
-        }
-        const tel = "51972043502";
-        const msg = `Hola CarroQhatu!%0AQuiero cotizar mi auto:%0A- Año: ${data.year}%0A- Marca: ${data.brand}%0A- Modelo: ${data.model}`;
-        window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
-    }
-
     // Cerrar al hacer clic fuera
     window.onclick = function(e) {
         if (!e.target.closest('.input-group')) {
             closeAllMenus();
         }
     }
+
+   let ultimaCotizacion = {};
+
+    function cotizarAuto() {
+        const payload = {
+            year: data.year,
+            marca: data.brand,
+            modelo: data.model,
+            km: document.getElementById("input-km").value,
+            estado: document.getElementById("label-estado").innerText.toLowerCase()
+        };
+
+        fetch("http://localhost:5000/cotizar", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        })
+        .then(res => {
+            if (!res.ok) throw new Error("Backend error");
+            return res.json();
+        })
+        .then(res => {
+            ultimaCotizacion = { ...payload, min: res.min, max: res.max };
+
+            document.getElementById("resultado-texto").innerHTML =
+                `El precio estimado de tu <b>${payload.marca} ${payload.modelo}</b>
+                está entre <b>S/. ${res.min}</b> y <b>S/. ${res.max}</b> 
+                IMPORTANTE: Este precio es una estimación referencial basada 
+                en parámetros generales del mercado automotriz peruano. 
+                El valor final puede variar según inspección física, demanda y ubicación`;
+
+            document.getElementById("resultado-box").style.display = "block";
+            document.getElementById("ia-respuesta").innerHTML = "";
+        })
+        .catch(err => {
+            console.error(err);
+            alert("Error al cotizar (backend)");
+        });
+    }
+
+
+    function contactarAsesor() {
+        const d = ultimaCotizacion;
+        const msg = `Hola CarroQhatu!, quiero cotizar mi auto:
+    Marca: ${d.marca}
+    Modelo: ${d.modelo}
+    Año: ${d.year}
+    Km: ${d.km}
+    Estado: ${d.estado}
+    Me salió entre S/. ${d.min} y S/. ${d.max} en su sistema...`;
+
+        const url = "https://wa.me/51972043502?text=" + encodeURIComponent(msg);
+        window.open(url, "_blank");
+    }
+    function explicarIA() {
+        document.getElementById("ia-respuesta").innerHTML = "Analizando con IA...";
+
+        fetch("http://localhost:5000/explicar", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(ultimaCotizacion)
+        })
+        .then(res => res.json())
+        .then(res => {
+            document.getElementById("ia-respuesta").innerHTML = res.respuesta;
+        })
+        .catch(() => {
+            document.getElementById("ia-respuesta").innerHTML = "Error al conectar con IA";
+        });
+    }
+
 </script>
 
     <!--INICIO FOOTER-->

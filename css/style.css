@@ -2804,6 +2804,7 @@ a:hover {
 .iconlegal,
 .icontasacion{
     width: 5vw;
+    display: unset;
 }
 
 .btn-wsppform{
