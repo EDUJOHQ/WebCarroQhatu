@@ -17,7 +17,8 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
@@ -30,92 +31,223 @@
 </head>
 
 <body>
-     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
-        <div class="row">
-            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-body pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>+51 972 112 235</a>
-                    <span class="text-body">|</span>
-                    <a class="text-body px-3" href=""><i class="fa fa-envelope mr-2"></i>carroQhatu@example.com</a>
-                </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-body px-3" href="https://www.facebook.com/carroqhatu" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
+    <!-- Navbar Start -->
+        <div class="container-fluid position-relative nav-bar p-0">
+            <div class="position-relative px-lg-0" style="z-index: 9;" >
+                <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                    <a href="" class="navbar-brand">
+                        <img class="imglogo" src="img/CarroQhatuL.png" href="index.html" alt="Logo">
                     </a>
-                    <a class="text-body px-3" href="https://www.tiktok.com/@carroqhatu" target="_blank">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a class="text-body px-3" href="https://www.instagram.com/carroqhatu" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-body pl-3" href="https://www.youtube.com/@revelinobrayan2134" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-     <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="position-relative px-lg-0" style="z-index: 9;" >
-            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <img class="imglogo" src="img/CarroQhatuL.png" href="index.html" alt="Logo">
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link nav-home">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Compra un auto</a>
-                        <a href="service.html" class="nav-item nav-link">Vende tu auto</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vehículos</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="car.html" class="dropdown-item">Vehiculos usados</a>
-                                <a href="detail.html" class="dropdown-item">Vehículos usados premium</a>
-                                <a href="booking.html" class="dropdown-item">Contácto</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">
+                                <img src="img/iconoinicio (1).svg" class="iconhome">
+                            </a>
+                            <a href="about.html" class="nav-item nav-link">Compra un auto</a>
+                            <a href="service.html" class="nav-item nav-link">Vende tu auto</a> 
+                            <div class="nav-item dropdown">
+                                <a href="team.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="team.html" class="dropdown-item">Conócenos</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonios</a>
+                                    <a href="team.html" class="dropdown-item">Blog</a>
+                                    <a href="contact.html" class="dropdown-item">Contáctos</a>
+                                    
+                                </div>
+                            </div> 
+                            <div class="nav-item ml-lg-3">
+                                <a href="contact.html" class="btn-contacto">
+                                    Contáctanos<i class="fa fa-headset"></i>
+                                </a>   
                             </div>
                         </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="team.html" class="dropdown-item">Conócenos</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonios</a>
-                                <a href="team.html" class="dropdown-item">Blog</a>
-                                <a href="contact.html" class="dropdown-item">Contáctos</a>
-                                
-                            </div>
-                        </div>
-                            <a href="contact.html" class="btn-contacto">
-                                Contáctanos<i class="fa fa-headset"></i>
-                            </a>   
-                        </div>
-                     </div>
-                </div>
-            </nav>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </div>
     <!-- Navbar End -->
 
+    <!-- Banner Principal Inicio -->
+            <section class="banner-video-container">
+                <video class="banner-video" autoplay muted loop playsinline>
+                    <source src="img/bannertestimonios.mp4" type="video/mp4">
+                </video>
+                <div class="banner-overlayventa">                    
+                </div>
+            </section>
+    <!-- Banner Principal Final -->
+    <!--INICIO TESTIMONIOS-->
+        <h2 class="title-mv titulo-linea title-videos">
+            <span></span>
+        </h2>          
+        <section class="clientesventa">
+                <h2 class="titulo-principal2">Testimonios de clientes que ya
+                    <span>vendieron su auto</span>                     
+                </h2>
+                <div class="clientesventa-grid">
+                    <!-- CARD 1 -->
+                    <div class="clientesventa-card">
+                        <div class="perfil">                           
+                            <div>
+                                <h3>Anderson Coaquira H.</h3>
+                                <span>Vendió un Toyota Hilux SRV 2019</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <strong>4.0</strong>
+                        </div>
+                        <p>
+                            Salió todo impecable, cumplieron 100% en todo lo pactado.
+                            Súper rápido todo y la gente siempre muy atenta.
+                        </p>
+                    </div>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header">
-        <h1 class="display-3 text-uppercase text-white mb-3">CONOCE LO QUE DICEN <p></p>NUESTROS CLIENTES</h1>
-        <div class="d-inline-flex text-white">
-            <h6 class="text-uppercase m-0"><a class="text-white" href="">INICIO</a></h6>
-            <h6 class="text-body m-0 px-3">/</h6>
-            <h6 class="text-uppercase text-body m-0">Testimonios</h6>
+                    <!-- CARD 2 -->
+                    <div class="clientesventa-card">
+
+                        <div class="perfil">                           
+                            <div>
+                                <h3>Adrian Ticona M.</h3>
+                                <span>Vendió un Toyota Hilux SRV 2019</span>
+                            </div>
+                        </div>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <strong>5.0</strong>
+                        </div>
+
+                        <p>
+                            Me gustó el trato son muy confiables, vinieron a ver mi carro y me tasaron un buen precio, me mostraron todo detallado y con publicación en redes recibí muchas ofertas. Estoy muy agradecido CarroQhatu!
+                        </p>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="clientesventa-card">
+                        <div class="perfil">                            
+                            <div>
+                                <h3>Rosemary Palacios Quispe</h3>
+                                <span>Vendió Kia Soluto Semifull 2022</span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <strong>4.0</strong>
+                        </div>
+                        <p>
+                            Todo se cumplió en tiempo y forma. La atención es excelente, vendi mi auto y también pude renovar a uno mejor con la ayuda de CarroQhatu. Gracias...
+                        </p>
+                    </div>
+
+                </div>
+        </section>
+    <!--FIN TESTIMONIOS-->
+
+    <!--VIDEO TESTIMONIOS-->
+    <section class="tm-section-container container py-5">
+    <div class="tm-grid">
+        
+        <div class="tm-card" onclick="openVideo('videos/testimonioahorros.mp4')">
+            <div class="tm-video-thumb">
+                <img src="img/7añosahorros.svg" alt="Testimonio 1">
+                <div class="tm-play-btn">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="tm-body">
+                <p class="tm-comment">"La inspección y la seguridad que te dan es impresionante"</p>
+                <div class="tm-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Juliaca</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tm-card" onclick="openVideo('videos/videoclienteaqp.mp4')">
+            <div class="tm-video-thumb">
+                <img src="img/opinion2.svg" alt="Testimonio 2">
+                <div class="tm-play-btn">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+            <div class="tm-body">
+                <p class="tm-comment">"Increíble la experiencia con CarroQhatu hasta la puerta de mi casa"</p>
+                <div class="tm-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Arequipa</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-btn" onclick="closeVideo()">×</span>
+            <video id="modalVideo" src="" controls playsinline preload="none"></video>
         </div>
     </div>
-    <!-- Page Header Start -->
+
+     <script>
+            function openVideo(src) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+
+            video.src = src;
+            video.currentTime = 0;
+            modal.classList.add('active');
+            video.play().catch(() => {
+            console.log('Autoplay bloqueado, requiere interacción');
+            });
+            }
+
+            function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+
+            video.pause();
+            video.src = '';
+            modal.classList.remove('active');
+            }
+
+            /* cerrar click afuera */
+            document.getElementById('videoModal').addEventListener('click', e => {
+            if (e.target.id === 'videoModal') closeVideo();
+            });
+            </script>
+</section>
+<!--fin vidceo testimonbio-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- Testimonial Start -->

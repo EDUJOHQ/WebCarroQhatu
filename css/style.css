@@ -2875,6 +2875,483 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
     width: 14vw;
     height: auto;    
 }
+/* Contenedor Principal */
+.about-section {
+    padding: 60px 5vw;
+    background-color: #f8f8f8; 
+    overflow: hidden;
+}
+
+/* Título con líneas a los lados */
+.title-about {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #141924;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.title-about::before,
+.title-about::after {
+    content: '';
+    flex: 1;
+    border-bottom: 3px solid #FBD333; /* El amarillo de tu marca */
+}
+
+.title-about::before {
+    margin-right: 20px;
+}
+
+.title-about::after {
+    margin-left: 20px;
+}
+
+/* Grid Layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+/* Estilos de Texto */
+.txt-content {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #252525;
+}
+.txt2-content {
+    color: #252525;
+}
+
+.brand-highlight {
+    background-color: #FBD333;
+    color: #B70021;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.txt-content strong {
+    color: #1a202c;
+    font-weight: 700;
+}
+
+/* Contenedor de Imagen */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    /* Efecto sutil de sombra para que resalte el collage */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.02);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .title-about {
+        font-size: 1.8rem;
+    }
+    .txt-content {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+/* Contenedor General */
+.section-mision{
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    padding-bottom: 0; 
+    background: #0c0c0c;
+    border-radius: 5vw;
+}
+.section-vision{
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    padding-top: 0%;
+    background: #0c0c0c;
+    border-radius: 5vw;
+
+}
+.section-vision:hover, .section-mision:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+/* Filas */
+.mv-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mv-row.reverse {
+    flex-direction: row-reverse;
+    padding: 0px;
+}
+
+/* Texto */
+.mv-textmision {
+    flex: 1;
+    padding: 3vw;
+    margin: auto;
+    color: #fff;
+}
+.mv-textvision {
+    flex: 1;
+    padding: 3vw;
+    color: #fff;    
+}
+
+.mv-title {
+    font-family: 'Oswald', sans-serif; 
+    font-style: italic;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px; 
+    color: #ffffff;
+}
+.mv-title i{
+    color: #e25707;
+}
+.mv-title span{
+    color: #e25707;
+}
+.mv-textvision p,
+.mv-textmision p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+.mv-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+}
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .mv-row, .mv-row.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .mv-title {
+        justify-content: center;
+    }
+
+    .yellow-bg-skew {
+        width: 100%;
+        left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .mv-row, .mv-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mv-title {
+        justify-content: center;
+    }
+}
+
+
+/* Contenedor del Grid */
+.grid-containercards {
+    display: grid;
+    /* Crea columnas de al menos 280px que se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Estilo de la Tarjeta */
+.info-card {
+    background: #0c0c0c;
+    color: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-bottom: 4px solid transparent; /* Preparado para el hover */
+    min-height: 200px;
+}
+
+/* Estilo de los Iconos */
+.info-card i {
+    font-size: 2.5rem;
+    color: #FBD333; /* Tu amarillo */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo del Texto */
+.info-card p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- EFECTOS HOVER --- */
+.info-card:hover {
+    transform: translateY(-10px);
+    background: #151515;
+    border-bottom: 4px solid #FBD333; /* Resalta con el color de marca */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.info-card:hover i {
+    transform: scale(1.2);
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .grid-containercards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.historia {
+  padding: 80px 10%;
+  background: #f0f0f0;
+}
+
+.historia-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.historia-subtitulo {
+  font-size: 30px;
+  color: #000;
+}
+
+.historia-texto h2 {
+  font-size: 42px;
+  margin: 10px 0 30px;
+  color: #000;
+}
+
+.historia-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.historia-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.check {
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f5b400; /* amarillo CarroQhatu */
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.historia-video{
+  position: relative;
+  min-width: 290px;
+  height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .historia-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia-lista li {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+
+/*VIDEOS TESTIMONIOS*/
+/* Contenedor Principal */
+.tm-section-container {
+    background-color: #f8f9fa; /* Gris muy claro de fondo */
+    padding: 40px 15px;
+}
+
+.tm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta */
+.tm-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Miniatura de Video */
+.tm-video-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.tm-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* Botón Play Circular */
+.tm-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: background 0.3s ease;
+}
+
+.tm-card:hover .tm-play-btn {
+    background: #000;
+    scale: 1.1;
+}
+
+/* Cuerpo de la Tarjeta */
+.tm-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tm-comment {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+/* Ubicación (Pie de tarjeta) */
+.tm-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0056b3; /* Azul profesional */
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.tm-location i {
+    font-size: 1rem;
+}
+
+/* --- Ajuste de tu Modal Actual (para que no falle) --- */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+}
+.video-modal.active { display: flex; }
+.video-modal-content { width: 90%; max-width: 800px; position: relative; }
+.video-modal-content video { width: 100%; border-radius: 8px; }
+.close-btn { 
+    position: absolute; top: -40px; right: 0; 
+    color: #fff; font-size: 30px; cursor: pointer; 
+}
+/*FINVIDEOS TESTIMONIOS*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*PRUEBA FOOTER*/
