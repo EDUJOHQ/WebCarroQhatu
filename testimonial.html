@@ -53,7 +53,7 @@
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="team.html" class="dropdown-item">Conócenos</a>
                                     <a href="testimonial.html" class="dropdown-item">Testimonios</a>
-                                    <a href="team.html" class="dropdown-item">Blog</a>
+                                    <a href="booking.html" class="dropdown-item">Blog</a>
                                     <a href="contact.html" class="dropdown-item">Contáctos</a>
                                     
                                 </div>
@@ -79,10 +79,10 @@
                 </div>
             </section>
     <!-- Banner Principal Final -->
-    <!--INICIO TESTIMONIOS-->
-        <h2 class="title-mv titulo-linea title-videos">
-            <span></span>
-        </h2>          
+      <h2 class="linea">
+        <span></span>
+        </h2>
+    <!--INICIO TESTIMONIOS-->     
         <section class="clientesventa">
                 <h2 class="titulo-principal2">Testimonios de clientes que ya
                     <span>vendieron su auto</span>                     
@@ -158,14 +158,16 @@
                 </div>
         </section>
     <!--FIN TESTIMONIOS-->
-
+        <h2 class="linea">
+        <span></span>
+        </h2>
     <!--VIDEO TESTIMONIOS-->
     <section class="tm-section-container container py-5">
     <div class="tm-grid">
         
         <div class="tm-card" onclick="openVideo('videos/testimonioahorros.mp4')">
             <div class="tm-video-thumb">
-                <img src="img/7añosahorros.svg" alt="Testimonio 1">
+                <img src="img/miniaturavideo1test.svg" alt="Testimonio 1">
                 <div class="tm-play-btn">
                     <i class="fa-solid fa-play"></i>
                 </div>
@@ -181,7 +183,7 @@
 
         <div class="tm-card" onclick="openVideo('videos/videoclienteaqp.mp4')">
             <div class="tm-video-thumb">
-                <img src="img/opinion2.svg" alt="Testimonio 2">
+                <img src="img/miniaturavideo2test.svg" alt="Testimonio 2">
                 <div class="tm-play-btn">
                     <i class="fa-solid fa-play"></i>
                 </div>
@@ -197,17 +199,17 @@
 
     </div>
 
-    <div id="videoModal" class="video-modal">
-        <div class="video-modal-content">
+    <div id="videoModal2" class="video-modal2">
+        <div class="video-modal2-content2">
             <span class="close-btn" onclick="closeVideo()">×</span>
-            <video id="modalVideo" src="" controls playsinline preload="none"></video>
+            <video id="modalVideo2" src="" controls playsinline preload="none"></video>
         </div>
     </div>
 
      <script>
             function openVideo(src) {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('modalVideo');
+            const modal = document.getElementById('videoModal2');
+            const video = document.getElementById('modalVideo2');
 
             video.src = src;
             video.currentTime = 0;
@@ -218,8 +220,8 @@
             }
 
             function closeVideo() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('modalVideo');
+            const modal = document.getElementById('videoModal2');
+            const video = document.getElementById('modalVideo2');
 
             video.pause();
             video.src = '';
@@ -227,180 +229,381 @@
             }
 
             /* cerrar click afuera */
-            document.getElementById('videoModal').addEventListener('click', e => {
-            if (e.target.id === 'videoModal') closeVideo();
+            document.getElementById('videoModal2').addEventListener('click', e => {
+            if (e.target.id === 'videoModal2') closeVideo();
             });
             </script>
 </section>
 <!--fin vidceo testimonbio-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <h1 class="display-4 text-uppercase text-center mb-5">Our Client's Say</h1>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <img class="img-fluid ml-n4" src="img/testimonial-1.jpg" alt="">
-                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                    </div>
-                    <h4 class="text-uppercase mb-2">Client Name</h4>
-                    <i class="mb-2">Profession</i>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+<!--section cardtestimonios-->
+    <div class="stats-testimonios" id="stats-section">
+        <div class="row text-center">
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="500">0</div><span class="stat-symbol">+</span>
+                    <div class="stat-label">Clientes Satisfechos</div>
                 </div>
-                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <img class="img-fluid ml-n4" src="img/testimonial-2.jpg" alt="">
-                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                    </div>
-                    <h4 class="text-uppercase mb-2">Client Name</h4>
-                    <i class="mb-2">Profession</i>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+            </div>        
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="98">0</div><span class="stat-symbol">%</span>
+                    <div class="stat-label">Recomendación</div>
                 </div>
-                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <img class="img-fluid ml-n4" src="img/testimonial-3.jpg" alt="">
-                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                    </div>
-                    <h4 class="text-uppercase mb-2">Client Name</h4>
-                    <i class="mb-2">Profession</i>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="4.9" data-decimals="1">0</div>
+                    <div class="stat-label">Calificación Promedio</div>
                 </div>
-                <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <img class="img-fluid ml-n4" src="img/testimonial-4.jpg" alt="">
-                        <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                    </div>
-                    <h4 class="text-uppercase mb-2">Client Name</h4>
-                    <i class="mb-2">Profession</i>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="2">0</div><span class="stat-symbol">h</span>
+                    <div class="stat-label">Respuesta Promedio</div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.5 // La animación inicia cuando se ve el 50% de la sección
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const stats = entry.target.querySelectorAll('.stat-num');
+                    stats.forEach(stat => {
+                        const target = +stat.getAttribute('data-target');
+                        const decimals = stat.getAttribute('data-decimals') || 0;
+                        const duration = 2000; // Duración en milisegundos (2 segundos)
+                        const startTime = performance.now();
+
+                        const updateCount = (currentTime) => {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / duration, 1);
+                            
+                            // Efecto de facilidad (easeOutQuad)
+                            const easeProgress = progress * (2 - progress);
+                            
+                            const currentValue = easeProgress * target;
+                            
+                            stat.innerText = currentValue.toFixed(decimals);
+
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                stat.innerText = target.toLocaleString(); // Valor final exacto
+                            }
+                        };
+
+                        requestAnimationFrame(updateCount);
+                    });
+                    observer.unobserve(entry.target); // Para que solo ocurra una vez
+                }
+            });
+        }, observerOptions);
+
+        const section = document.querySelector('#stats-section');
+        if (section) observer.observe(section);
+    });
+    </script>
+<!--fin section cardtestimonios-->
 
 
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="owl-carousel vendor-carousel">
-                <div class="bg-light p-4">
-                    <img src="img/vendor-1.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-2.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-3.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-4.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-5.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-6.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-7.png" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-8.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
+    <!--INICIO TESTIMONIOS CLIENTES-->
+            <h2 class="title-mv titulo-linea title-videos">
+            <span></span>
+                Lo que opinan nuestros clientes
+            <span></span>
+            </h2>
 
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope text-white mr-3"></i>info@example.com</p>
-                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
-                    <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
-                    <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
-                <div class="row mx-n1">
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-1.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-2.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-3.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-4.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-5.jpg" alt=""></a>
-                    </div>
-                    <div class="col-4 px-1 mb-2">
-                        <a href=""><img class="w-100" src="img/gallery-6.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
-                <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <div class="w-100 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary text-uppercase px-3">Sign Up</button>
+        <!--GRUPO POSTERIOR IZQUIERDA-->
+        <section class="comentarios-izq">
+            <div class="testimonios-content">
+                <div class="testimoniosdirec izq">
+                    <!--Grupo principal izquierda-->
+                    <div class="grupo-testi">            
+                        <div class="testimonios-card">
+                            <div class="user">
+                            <img src="img/juan.jpg">
+                                <div class="user-info">
+                                    <strong>Juan Huarachi</strong>
+                                    <span>22 septiembre 2025</span>
+                                </div>
+                            </div>
+                            <p>Buen servicio y trato cordial. Muy confiables CarroQhatu.</p>
                         </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/rosam.jpg">
+                                    <div class="user-info">
+                                        <strong>Rosa Mamani</strong>
+                                        <span>18 octubre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Gracias a la inspección que hacen a los carros compré con seguridad y con total confianza.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/traveler.jpg">
+                                    <div class="user-info">
+                                        <strong>Traveler</strong>
+                                        <span>29 diciembre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Me explicaron cada detalle del vehículo que queria comprar y ellos me acompañaron en la compra, buen servicio me ayudaron bastante.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/sonia.jpg">
+                                    <div class="user-info">
+                                        <strong>Sonia Condori</strong>
+                                        <span>08 enero 2025</span>
+                                    </div>
+                            </div>
+                            <p>La tasación fue justa, me dijeron el porqué así y estuvo bien sustentada. Gracias a eso logré vender rápido.</p>
+                        </div> 
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/Edwin.jpg">
+                                    <div class="user-info">
+                                        <strong>Edwin Torres</strong>
+                                        <span>07 diciembre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Logré comprar mi primer auto, muy bonito y en buen estado gracias a Carroqhatu.</p>
+                        </div>  
+                        <!--DUPLICADO DIRECCIÓN IZQUIERDA-->
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/rosam.jpg">
+                                    <div class="user-info">
+                                        <strong>Rosa Mamani</strong>
+                                        <span>18 octubre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Gracias a la inspección que hacen a los carros compré con seguridad y con total confianza.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                            <img src="img/juan.jpg">
+                                <div class="user-info">
+                                    <strong>Juan Huarachi</strong>
+                                    <span>22 septiembre 2025</span>
+                                </div>
+                            </div>
+                            <p>Buen servicio y trato cordial. Muy confiables CarroQhatu.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/traveler.jpg">
+                                    <div class="user-info">
+                                        <strong>Traveler</strong>
+                                        <span>29 diciembre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Me explicaron cada detalle del vehículo que queria comprar y ellos me acompañaron en la compra, buen servicio me ayudaron bastante.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/sonia.jpg">
+                                    <div class="user-info">
+                                        <strong>Sonia Condori</strong>
+                                        <span>08 enero 2025</span>
+                                    </div>
+                            </div>
+                            <p>La tasación fue justa, me dijeron el porqué así y estuvo bien sustentada. Gracias a eso logré vender rápido.</p>
+                        </div> 
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/Edwin.jpg">
+                                    <div class="user-info">
+                                        <strong>Edwin Torres</strong>
+                                        <span>07 diciembre 2025</span>
+                                    </div>
+                            </div>
+                            <p>Logré comprar mi primer auto, muy bonito y en buen estado gracias a Carroqhatu.</p>
+                        </div>                   
                     </div>
                 </div>
-                <i>Lorem sit sed elitr sed kasd et</i>
+            </div>
+        </section>
+
+        <!--GRUPO INFERIOR DERECHA-->
+        <section class="comentarios-der">
+            <div class="testimonios-content">
+                <div class="testimoniosdirec der">
+
+                    <!--Grupo principal derecha-->
+                    <div class="grupo-testi">                    
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/victor.jpg">
+                                <div class="user-info">
+                                    <strong>Víctor Quispe M.</strong>
+                                    <span>19 agosto 2025</span>
+                                </div>
+                            </div>
+                            <p>Recibí muchas ofertas y me quede con la mejor. Ganao!! Gracias CarroQhatu!!</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/Elena.jpg">
+                                <div class="user-info">
+                                    <strong>Elena C. M.</strong>
+                                    <span>03 diciembre 2024</span>
+                                </div>
+                            </div>
+                            <p>Recomendado 100%, mi papá está feliz con su nuevo carro...</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/jose.jpg">
+                                <div class="user-info">
+                                    <strong>José098</strong>
+                                    <span>01 enero 2025</span>
+                                </div>
+                            </div>
+                            <p>Me ayudaron a vender mi vehiculo a un buen precio, muy recomendado muchas gracias CarroQhatu.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/anthony.jpg">
+                                <div class="user-info">
+                                    <strong>Anthony_6410</strong>
+                                    <span>05 noviembre 2024</span>
+                                </div>
+                            </div>
+                            <p>Mi primer auto, muy bonito y en buen estado gracias a Carroqhatu.</p>
+                        </div> 
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/martin.png">
+                                <div class="user-info">
+                                    <strong>Martin Zuñiga</strong>
+                                    <span>13 de Octubre 2025</span>
+                                </div>
+                            </div>
+                            <p>Tenia dudas, pero realmente sorprendieron con su eficiencia.</p>
+                        </div> 
+                        <!--DUPLICADO DIRECCIÓN IZQUIERDA-->
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/victor.jpg">
+                                <div class="user-info">
+                                    <strong>Víctor Quispe M.</strong>
+                                    <span>19 agosto 2025</span>
+                                </div>
+                            </div>
+                            <p>Recibí muchas ofertas y me quede con la mejor. Ganao!! Gracias CarroQhatu!!</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/Elena.jpg">
+                                <div class="user-info">
+                                    <strong>Elena C. M.</strong>
+                                    <span>03 diciembre 2024</span>
+                                </div>
+                            </div>
+                            <p>Recomendado 100%, mi papá está feliz con su nuevo carro...</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/jose.jpg">
+                                <div class="user-info">
+                                    <strong>José098</strong>
+                                    <span>01 enero 2025</span>
+                                </div>
+                            </div>
+                            <p>Me ayudaron a vender mi vehiculo a un buen precio, muy recomendado muchas gracias CarroQhatu.</p>
+                        </div>
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/anthony.jpg">
+                                <div class="user-info">
+                                    <strong>Anthony_6410</strong>
+                                    <span>05 noviembre 2024</span>
+                                </div>
+                            </div>
+                            <p>Mi primer auto, muy bonito y en buen estado gracias a Carroqhatu.</p>
+                        </div> 
+                        <div class="testimonios-card">
+                            <div class="user">
+                                <img src="img/martin.png">
+                                <div class="user-info">
+                                    <strong>Martin Zuñiga</strong>
+                                    <span>13 de Octubre 2025</span>
+                                </div>
+                            </div>
+                            <p>Tenia dudas, pero realmente sorprendieron con su eficiencia.</p>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--FIN TESTIMONIOS CLIENTES-->
+
+    <!--INICIO FOOTER-->
+    <footer class="main-footer">    
+        <img class="logo-footer" src="img/CarroQhatuL.png">
+        <div class="footer-grid">        
+            <div class="col-brand">
+                <p>Plataforma líder en la Compra y Venta de Vehículos Usados en el Perú.</p>
+                <div class="social-icons">
+                    <a href="#" class="icon-box"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                
+                <div class="col-contact">
+                    <h3 class="h3footer">Contacto</h3>
+                    <div class="contact-links">
+                        <a href="tel:+51972043502"><i class="fa-solid fa-phone"></i> +51 972043502</a>
+                        <a href="mailto:rbm.aracayo@gmail.com"><i class="fa-solid fa-envelope"></i> rbm.aracayo@gmail.com</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-center">
+                <div class="center-top">
+                    <div class="sub-col">
+                        <h3 class="h3footer">Explora</h3>
+                        <ul>
+                            <li><a href="about.html">Comprar auto</a></li>
+                            <li><a href="service.html">Vender mi auto</a></li>
+                            <li><a href="#">Catálogo</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-col">
+                        <h3 class="h3footer">Soporte</h3>
+                        <ul>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Privacidad</a></li>
+                            <li><a href="#">Libro de Reclamaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="center-bottom">
+                    <h3 class="h3footer">¿Quieres que te contactemos?</h3>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Tu Email o Nº Celular aquí" required>
+                        <button type="submit">ENVIAR</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
-        <p class="mb-2 text-center text-body">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
-    </div>
-    <!-- Footer End -->
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarroQhatu • Todos los Derechos Reservados</p>
+        </div>
+    </footer>
+    <!--FIN FOOTER-->
 
 
     <!-- Back to Top -->

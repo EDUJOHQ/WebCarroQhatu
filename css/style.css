@@ -1142,6 +1142,18 @@ h6,
     height: 2px;
     background: #FBD333;
 }
+
+.linea {
+    display: flex;
+    align-items: center;
+    margin: 5vw;
+}
+
+.linea span {
+    flex: 1;
+    height: 2px;
+    background: #FBD333;
+}
 .title-exploracatalog{
     color:#1b1b1b;
     padding: 5vw
@@ -3310,7 +3322,7 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
 }
 
 /* --- Ajuste de tu Modal Actual (para que no falle) --- */
-.video-modal {
+.video-modal2 {
     display: none;
     position: fixed;
     z-index: 9999;
@@ -3319,15 +3331,61 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
     align-items: center;
     justify-content: center;
 }
-.video-modal.active { display: flex; }
-.video-modal-content { width: 90%; max-width: 800px; position: relative; }
-.video-modal-content video { width: 100%; border-radius: 8px; }
+.video-modal2.active {
+  display: flex;
+  animation: fadeIn .25s ease;
+}
+.video-modal2-content2 { 
+    position: relative;
+    width: 300px;
+    height: auto;
+    background: black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.video-modal-content2 video { 
+    width: 200px; 
+    height: 200px;
+    border-radius: 8px; 
+}
 .close-btn { 
     position: absolute; top: -40px; right: 0; 
     color: #fff; font-size: 30px; cursor: pointer; 
 }
 /*FINVIDEOS TESTIMONIOS*/
 
+/*STATS TESTIMONIOS*/
+.stats-testimonios{
+    background-color: #FBD333;
+    margin: 4vw;
+    border-radius: 10px;
+    padding: 5vw;    
+}
+.stat-num {
+    display: inline-block; 
+    font-size: 3rem;
+    color: #B70021;
+    margin: 0;
+    font-weight: 400;
+}
+.stat-symbol {
+    font-size: 2.5rem; /* Un poco más pequeño si prefieres */
+    color: #B70021;
+    font-weight: 400;
+}
+.stat-label{
+    color: #000000;
+    margin: 0;
+    font-weight: 500;
+}
+.stat-item{
+    border: 10px;
+    border-color: white;
+}
+.stat-item:hover{
+    transform: scale(1.05);
+}
+/*FIN STAT TESTIMONIOS*/
 
 
 
