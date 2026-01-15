@@ -3387,9 +3387,182 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
 }
 /*FIN STAT TESTIMONIOS*/
 
+/*INICIO BLOG*/
+/* BLOG SECTION */
+.blog-section {
+    padding: 60px 0;
+}
 
+.linea-decorativa {
+    width: 60px;
+    height: 4px;
+    background-color: #FBD333;
+    margin: 10px auto 30px;
+}
 
+.blog-card {
+    background: #fff;
+    border-radius: 10px; /* Igual que tus stats */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+.blog-card:hover {
+    transform: translateY(-10px); /* Efecto de levante */
+}
+
+/* El borde rojo que mencionaste en tus stats */
+.border-destacado {
+    border: 2px solid #B70021;
+}
+
+.blog-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #FBD333;
+    color: #000;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.blog-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.blog-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+.blog-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.blog-link {
+    color: #B70021; /* Tu rojo */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.blog-link:hover {
+    color: #000;
+    padding-left: 5px;
+}
+/*FIN BLOG*/
+
+/**/
+/* Contenedor del Mosaico */
+.text-bentogrid p{
+    color: black;
+}
+.qhatu-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr; /* Una columna ancha y dos normales */
+    grid-template-rows: 250px 250px; /* Dos filas de igual altura */
+    gap: 15px;
+    padding: 20px 0;
+}
+
+/* Estilo base de cada item */
+.grid-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Hacer que la primera tarjeta sea grande */
+.grid-item.large {
+    grid-row: 1 / 3; /* Ocupa desde la fila 1 a la 3 */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.7; /* Para que el texto resalte más */
+}
+
+/* Efecto Zoom al pasar el mouse */
+.grid-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/* Overlay con degradado para legibilidad */
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.badge-social {
+    background-color: #FBD333; /* Tu amarillo */
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    align-self: flex-start;
+}
+
+.grid-text {
+    color: #fff;
+}
+
+.grid-text h4 {
+    font-size: 1.1rem;
+    margin: 5px 0 0;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #ddd6ba;
+}
+
+/* Responsivo: En celulares todo en una sola columna */
+@media (max-width: 768px) {
+    .qhatu-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .grid-item.large {
+        grid-row: auto;
+        height: 300px;
+    }
+    .grid-item {
+        height: 200px;
+    }
+}
+/**/
 
 
 
