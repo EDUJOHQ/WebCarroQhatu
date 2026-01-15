@@ -141,7 +141,6 @@ h6,
 }
 /*INICIO NAVBAR*/
 
-
 .navbar-nav {
     display: flex;
     align-items: center; 
@@ -208,31 +207,53 @@ h6,
 /*FIN BTN CONTACTO*/
 
 /*sección contacto*/
+.title-contact{
+    font-size: 3vw;
+    color: #1B2532;
+}
 .contacto-section .form-control, .contacto-section .form-select {
     border: 2px solid #eee;
     border-radius: 10px;
     transition: 0.3s;
 }
 
+
 .contacto-section .form-control:focus {
     border-color: #FBD333;
     box-shadow: none;
 }
-
+.sedes-contact,
+.wspp-contact,
+.correo-contact{
+    background-color: #FBD333;
+}
 .btn-warning:hover {
     background-color: #e6c22e !important;
     transform: translateY(-2px);
 }
 
-.icon-box {
-    width: 50px;
-    height: 50px;
+.icon-contact {
+    width: 35px; 
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: #c51f1f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);      
+    border-radius: 5px; 
+    margin-right: 10px;
+}
+.icon-contact h6{
+    color:#1B2532
+}
+.text-cardcontact{
+    color:#1B2532
+}
+.form-labelcontact {
+    color: #1B2532;
+}
+.btn-contactenviar{
+    margin: 2vw;
 }
 .datos p{
     color: #808080;
@@ -3754,9 +3775,12 @@ a:hover { color: #f37021; }
 /* Iconos de Redes Sociales (Cuadritos) */
 .social-icons { display: flex; gap: 10px; margin-top: 20px; }
 .icon-box {
-    width: 35px; height: 35px;
+    width: 35px; 
+    height: 35px;
     background: #222;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     border-radius: 5px; color: #fff;
 }
 .icon-box:hover { background: #f37021; color: white;}

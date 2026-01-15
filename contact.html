@@ -30,85 +30,45 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
-        <div class="row">
-            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-body pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</a>
-                    <span class="text-body">|</span>
-                    <a class="text-body px-3" href=""><i class="fa fa-envelope mr-2"></i>info@example.com</a>
-                </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-body px-3" href="">
-                        <i class="fab fa-facebook-f"></i>
+<body>    
+ <!-- Navbar Start -->
+        <div class="container-fluid position-relative nav-bar p-0">
+            <div class="position-relative px-lg-0" style="z-index: 9;" >
+                <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                    <a href="" class="navbar-brand">
+                        <img class="imglogo" src="img/CarroQhatuL.png" href="index.html" alt="Logo">
                     </a>
-                    <a class="text-body px-3" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-body px-3" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-body px-3" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-body pl-3" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">
+                                <img src="img/iconoinicio (1).svg" class="iconhome">
+                            </a>
+                            <a href="about.html" class="nav-item nav-link">Compra un auto</a>
+                            <a href="service.html" class="nav-item nav-link">Vende tu auto</a> 
+                            <div class="nav-item dropdown">
+                                <a href="team.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="team.html" class="dropdown-item">Conócenos</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonios</a>
+                                    <a href="booking.html" class="dropdown-item">Blog</a>
+                                    <a href="contact.html" class="dropdown-item">Contáctos</a>
+                                    
+                                </div>
+                            </div> 
+                            <div class="nav-item ml-lg-3">
+                                <a href="contact.html" class="btn-contacto">
+                                    Contáctanos<i class="fa fa-headset"></i>
+                                </a>   
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
-    </div>
-    <!-- Topbar End -->
-
-
- <!--NAVBAR INICIO-->
-    <div class="container-fluid position-relative nav-bar p-0">
-    <div class="position-relative px-lg-0" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5 shadow-sm">
-            <a href="index.html" class="navbar-brand">
-                <img class="imglogo" src="img/CarroQhatuL.png" alt="Logo">
-            </a>
-
-            <div class="navbar-social d-none d-lg-flex ml-4">
-                <a class="social-icon" href="https://www.facebook.com/carroqhatu" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a class="social-icon" href="https://www.tiktok.com/@carroqhatu" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a class="social-icon" href="https://www.instagram.com/carroqhatu" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="social-icon" href="https://www.youtube.com/@revelinobrayan2134" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
-
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <div class="navbar-nav ml-auto py-0 align-items-center">
-                    <a href="about.html" class="nav-item nav-link">Compra un auto</a>
-                    <a href="service.html" class="nav-item nav-link">Vende tu auto</a>
-                    <div class="nav-item dropdown">
-                                    <a href="team.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Nosotros</a>
-                                    <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="team.html" class="dropdown-item">Conócenos</a>
-                                        <a href="testimonial.html" class="dropdown-item">Testimonios</a>
-                                        <a href="team.html" class="dropdown-item">Blog</a>
-                                        <a href="contact.html" class="dropdown-item">Contáctos</a>
-                                        
-                                    </div>
-                                </div> 
-                    <div class="nav-item ml-lg-3">
-                        <a href="https://wa.me/51972043502" class="btn-contactowspp" target="_blank">
-                            Whatsapp <i class="fa fa-headset ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-    <!--NAVBAR FINAL-->
+    <!-- Navbar End -->
       <!-- Banner Principal Inicio -->
             <section class="banner-video-container">
                 <video class="banner-video" autoplay muted loop playsinline>
@@ -118,6 +78,93 @@
                 </div>
             </section>
         <!-- Banner Principal Final -->
+
+        <!--FORMULARIO CONTACTO-->
+        <h2 class="linea">
+        <span></span>
+        </h2>
+
+<section class="contacto-section container my-5">
+    <div class="row g-5">
+        <div class="col-lg-5">
+            <h2 class="fw-bold title-contact">Hablemos de tu <span style="color: #B70021;">próximo auto</span></h2>
+            <p class="text-muted mb-4">¿Necesitas una inspección técnica o una tasación en Juliaca o Arequipa? Nuestro equipo multidisciplinario está listo para ayudarte.</p>
+            
+            <div class="contact-info">
+                <div class="d-flex align-items-center mb-3 p-3 border rounded-3 sedes-contact">
+                    <div class="icon-contact me-3" style="color: #B70021; font-size: 1.5rem;">📍</div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Nuestras Sedes</h6>
+                        <p class="mb-0 small text-cardcontact">Juliaca y Arequipa, Perú</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-3 p-3 border rounded-3 wspp-contact">
+                    <div class="icon-contact me-3" style="color: #25D366; font-size: 1.5rem;">💬</div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">WhatsApp</h6>
+                        <p class="mb-0 small text-cardcontact">+51 972 043 502</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center p-3 border rounded-3 correo-contact">
+                    <div class="icon-contact  me-3" style="color: #B70021; font-size: 1.5rem;">✉️</div>
+                    <div>
+                        <h6 class="mb-0 fw-bold">Correo Electrónico</h6>
+                        <p class="mb-0 small text-cardcontact">rbm.aracayo@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card border-0 shadow-lg p-4 rounded-4">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-labelcontact fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control p-3" placeholder="Ej. Juan Pérez">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-labelcontact fw-bold">WhatsApp / Celular</label>
+                            <input type="tel" class="form-control p-3" placeholder="+51 ...">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-labelcontact fw-bold">Ciudad</label>
+                            <select class="form-select p-3">
+                                <option selected>Selecciona tu ciudad</option>
+                                <option value="juliaca">Juliaca</option>
+                                <option value="arequipa">Arequipa</option>
+                                <option value="arequipa">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-labelcontact fw-bold">Servicio de interés</label>
+                            <select class="form-select p-3">
+                                <option selected>¿En qué te ayudamos?</option>
+                                <option value="inspeccion">Inspección Técnica</option>
+                                <option value="tasacion">Tasación de Vehículo</option>
+                                <option value="busqueda">Búsqueda Personalizada</option>
+                                <option value="otraconsulta">Otra consulta</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-labelcontact fw-bold">Mensaje</label>
+                            <textarea class="form-control p-3" rows="4" placeholder="Cuéntanos sobre el vehículo..."></textarea>
+                        </div>
+                        <div class="col-12 btn-contactenviar">
+                            <button type="submit" class="btn btn-warning w-100 fw-bold p-3" style="background-color: #FBD333; border: none;">ENVIAR SOLICITUD</button>                            
+                        </div>
+                        <div class="datos">
+                            <p>Tus datos están seguros. Priorizamos la protección del cliente y la transparencia en cada trámite.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+        <!--FIN FORMULARIO CONTACTO-->
         <h2 class="linea">
         <span></span>
         </h2>
@@ -149,176 +196,8 @@
         <span></span>
         </h2>
 
-<section class="contacto-section container my-5">
-    <div class="row g-5">
-        <div class="col-lg-5">
-            <h2 class="fw-bold">Hablemos de tu <span style="color: #B70021;">próximo auto</span></h2>
-            <p class="text-muted mb-4">¿Necesitas una inspección técnica o una tasación en Juliaca o Arequipa? Nuestro equipo multidisciplinario está listo para ayudarte.</p>
-            
-            <div class="contact-info">
-                <div class="d-flex align-items-center mb-3 p-3 border rounded-3 bg-light">
-                    <div class="icon-box me-3" style="color: #B70021; font-size: 1.5rem;">📍</div>
-                    <div>
-                        <h6 class="mb-0 fw-bold">Nuestras Sedes</h6>
-                        <p class="mb-0 small text-muted">Juliaca y Arequipa, Perú</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center mb-3 p-3 border rounded-3 bg-light">
-                    <div class="icon-box me-3" style="color: #25D366; font-size: 1.5rem;">💬</div>
-                    <div>
-                        <h6 class="mb-0 fw-bold">WhatsApp</h6>
-                        <p class="mb-0 small text-muted">+51 9XX XXX XXX</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center p-3 border rounded-3 bg-light">
-                    <div class="icon-box me-3" style="color: #B70021; font-size: 1.5rem;">✉️</div>
-                    <div>
-                        <h6 class="mb-0 fw-bold">Correo Electrónico</h6>
-                        <p class="mb-0 small text-muted">contacto@carroqhatu.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-7">
-            <div class="card border-0 shadow-lg p-4 rounded-4">
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">Nombre Completo</label>
-                            <input type="text" class="form-control p-3" placeholder="Ej. Juan Pérez">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">WhatsApp / Celular</label>
-                            <input type="tel" class="form-control p-3" placeholder="+51 ...">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">Ciudad</label>
-                            <select class="form-select p-3">
-                                <option selected>Selecciona tu ciudad</option>
-                                <option value="juliaca">Juliaca</option>
-                                <option value="arequipa">Arequipa</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label fw-bold">Servicio de interés</label>
-                            <select class="form-select p-3">
-                                <option selected>¿En qué te ayudamos?</option>
-                                <option value="inspeccion">Inspección Técnica</option>
-                                <option value="tasacion">Tasación de Vehículo</option>
-                                <option value="busqueda">Búsqueda Personalizada</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label fw-bold">Mensaje</label>
-                            <textarea class="form-control p-3" rows="4" placeholder="Cuéntanos sobre el vehículo..."></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-warning w-100 fw-bold p-3" style="background-color: #FBD333; border: none;">ENVIAR SOLICITUD</button>                            
-                        </div>
-                        <div class="datos">
-                            <p>Tus datos están seguros. Priorizamos la protección del cliente y la transparencia en cada trámite.</p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
-            <div class="row">
-                <div class="col-lg-7 mb-2">
-                    <div class="contact-form bg-light mb-4" style="padding: 30px;">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 form-group">
-                                    <input type="text" class="form-control p-4" placeholder="Your Name" required="required">
-                                </div>
-                                <div class="col-6 form-group">
-                                    <input type="email" class="form-control p-4" placeholder="Your Email" required="required">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control p-4" placeholder="Subject" required="required">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control py-3 px-4" rows="5" placeholder="Message" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5 mb-2">
-                    <div class="bg-secondary d-flex flex-column justify-content-center px-5 mb-4" style="height: 435px;">
-                        <div class="d-flex mb-3">
-                            <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
-                            <div class="mt-n1">
-                                <h5 class="text-light">Head Office</h5>
-                                <p>123 Street, New York, USA</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
-                            <div class="mt-n1">
-                                <h5 class="text-light">Branch Office</h5>
-                                <p>123 Street, New York, USA</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
-                            <div class="mt-n1">
-                                <h5 class="text-light">Customer Service</h5>
-                                <p>customer@example.com</p>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
-                            <div class="mt-n1">
-                                <h5 class="text-light">Return & Refund</h5>
-                                <p class="m-0">refund@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
 
     <!--INICIO FOOTER-->
     <footer class="main-footer">    
@@ -378,9 +257,8 @@
     </footer>
     <!--FIN FOOTER-->
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- REGRESO AL INICIO-->
+    <a href="#" class="btn btn-lg btn-subir btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
