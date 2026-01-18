@@ -21,7 +21,7 @@ const listaAutos = [
         km: "53.000",
         ubicacion: "Arequipa",
         precioContado: "S/. 61,000 Soles",
-        anio: "2023",
+        anio: "2016",
         transmision: "Mecánica",
         fotos: ["img/sportage1.jpg","img/KIASPORTAGE2.jpg", "img/KIASPORTAGE3.jpg", "img/KIASPORTAGE4.jpg", "img/KIASPORTAGE5.jpg", "img/KIASPORTAGE6.jpg", "img/KIASPORTAGE7.jpg", "img/KIASPORTAGE8.jpg"]
     }
