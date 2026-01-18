@@ -5,58 +5,16 @@
     <title>Detalle del Vehículo | CARROQHATU</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body { background-color: #ffffff; font-family: 'Open Sans', sans-serif; color: #1a1a1a; }
-        
-        /* Contenedor de Imagen con Flechas */
-        .carousel-container { position: relative; border-radius: 12px; overflow: hidden; background: #f4f4f4; }
-        .img-main { width: 100%; height: 450px; object-fit: cover; }
-        
-        .btn-nav { 
-            position: absolute; top: 50%; transform: translateY(-50%);
-            background: #FBD333; border: none; width: 45px; height: 45px;
-            border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            cursor: pointer; z-index: 10; transition: 0.3s;
-        }
-        .btn-nav:hover { background: #f8f8f8; scale: 1.1; }
-        .btn-prev { left: 15px; }
-        .btn-next { right: 15px; }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        /* Contador de imágenes 1/5 */
-        .img-counter {
-            position: absolute; top: 15px; right: 15px;
-            background: rgba(0,0,0,0.6); color: white;
-            padding: 4px 12px; border-radius: 6px; font-size: 0.8rem;
-        }
-
-        /* Caja de Información (Derecha) */
-        .info-card { padding: 0 15px; }
-        .price-contado { font-size: 1.7rem; font-weight: 500; margin-bottom: 0; }
-        .divider { border-top: 1px solid #eee; margin: 20px 0; }
-
-        /* Ficha técnica estilo lista */
-        .tech-item { 
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 0; border-bottom: 1px solid #eee; cursor: pointer;
-        }
-        .tech-item:hover { background-color: #fafafa; }
-        .title-model { font-size: 2vw;}
-        .tech-label { color: #666; font-size: 1rem; }
-        .tech-value { font-weight: 600; font-size: 1.1rem; }
-        .tech-item i.fa-chevron-down { color: #0046ff; font-size: 0.8rem; }
-
-        /* Miniaturas */
-        .thumb { width: 100px; height: 70px; object-fit: cover; border-radius: 8px; cursor: pointer; margin-right: 10px; border: 2px solid transparent; }
-        .thumb.active { border-color: #0046ff; }
-    </style>
 </head>
 
 <body>
      <!--NAVBAR-->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="position-relative px-lg-0" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5 shadow-sm">
+            <nav class="navbar navbar-expand-lg bg-white navbar-dark py-3 py-lg-0 pl-3 pl-lg-5 shadow-sm">
                 <a href="index.html" class="navbar-brand">
                     <img class="imglogo" src="img/CarroQhatuL.png" alt="Logo">
                 </a>
@@ -106,7 +64,7 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="info-card">
+                <div class="info-car">
                     <div class="d-flex justify-content-between align-items-start">
                         <div>
                             <h1 id="txtNombre" class="h3 title-model font-weight-bold mb-9"></h1>
@@ -119,7 +77,7 @@
 
                     <div class="mb-4">
                         <span class="text-muted small">Precio contado</span>
-                        <p id="txtPrecioContado" class="price-contado"></p>
+                        <h1 id="txtPrecioContado" class="price-contado"></h1>
                     </div>
 
                     <div class="divider"></div>
@@ -151,9 +109,12 @@
                             <span class="tech-value" id="txtTransmision"></span>
                         </div>
                     </div>
-                    <button id="btnReservar" class="btn-carroqhatu">
+                    <div class="btnReservarDetail">
+                        <button id="btnReservar" class="btn-reservarcardetail">
                         Reservar ahora
                     </button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -166,7 +127,7 @@
             <img id="fullImage" src="" alt="Imagen Completa">
     </div>
 </div>
-
+<!--FIN FORM DETALLE CARRO-->
 
     <!--BANNER DETAIL-->
         <section class="cards-detailcontainer">
@@ -180,7 +141,6 @@
     <!--FIN BANNER DETAIL-->
 
     <!--CATÁLOGO DETAIL 1-->
-    
         <h2 class="beneficios-title titulo-linea title-detailcatalogo">
             También te puede interesar
             <span></span>
@@ -269,13 +229,13 @@
                 <button class="mv-arrow right">&#10095;</button>
             </div>
         </section>
-        <!--FIN CATALOGO DETAIL1-->
+    <!--FIN CATALOGO DETAIL1-->
 
-        <!--INICIO CATALOGO DETAIL2-->    
+    <!--INICIO CATALOGO 2-->    
         <h2 class="separador-detail detail-linea line-detailcatalogo">
             <span></span>
         </h2>
-        <section class="mas-vendidos container">
+        <section class="mas-vendidos container scroll2">
             <div class="carousel-wrapper">
                 <button class="mv2-arrow left">&#10094;</button>
                 <div class="mv-carousel">                               
@@ -391,39 +351,40 @@
                 <button class="mv2-arrow right">&#10095;</button>
             </div>
         </section>
-        <!--FIN DETAIL2-->
-        <!--INICIO FORMULARIO COTIZACION COMPRA-->
-        <section class="quote-section">
-            <div class="quote-card">
-                
-                <div class="form-side">
-                <h2>¿Tienes un auto específico en mente?</h2>
-                <p>Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+    <!--FIN CATALOGO 2-->
 
-                <div class="input-group">
-                    <label>¿Qué auto buscas?</label>
+    <!--INICIO FORMULARIO COTIZACION COMPRA-->
+    <section class="formcotizawspp">
+        <div class="item cta-box">
+        <div class="form-side">
+                <h2 class="formquestion">¿Tienes un auto específico en mente?</h2>
+                <p class="form-p">Nosotros lo encontramos por ti al mejor precio. ¡Cotiza ahora!</p>
+
+                <div class="input-infocotiza">
+                    <label class="question1">¿Qué auto buscas?</label>
                     <input type="text" id="carModel" placeholder="Ejemplo: Hyundai Tucson">
                 </div>
 
-                <div class="input-group">
-                    <label>Año / Rango de años</label>
+                <div class="input-infocotiza">
+                    <label class="question2">Año / Rango de años</label>
                     <input type="text" id="carYear" placeholder="Ejemplo: 2023 o 2020-2024">
                 </div>
 
-                <div class="input-group">
-                    <label>Presupuesto aproximado</label>
+                <div class="input-infocotiza">
+                    <label class="question3">Presupuesto aproximado</label>
                     <input type="text" id="carBudget" placeholder="Ejemplo: 35,000 soles">
                 </div>
 
-                <button onclick="sendToWhatsApp()" class="btn-wspp">Cotizar auto</button>
+                <button onclick="sendToWhatsApp()" class="btn-wsppform">Cotizar auto</button>
                 </div>
 
                 <div class="image-side">
                 <img src="img/cardetail3.svg" alt="Imagen del carro">
-                </div>
-
             </div>
-        </section> <!--FIN FORMULARIO COTIZACIÓN-->
+      </div> 
+    </section>
+        
+      <!--FIN FORMULARIO COTIZACIÓN-->
         
 
 
@@ -745,44 +706,67 @@
     </div>Related Car End -->
 
 
-        <!-- Footer Start -->
-    <div class="py-5 px-sm-3 px-md-5 footer-color" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="content-footercontact">
-                <h4 class="text-uppercase text-footer mb-4">CONTACTO</h4>
-                <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>+51 972043502</p>
-                <p><i class="fa fa-envelope text-white mr-3"></i>Rbm.aracayo@gmail.com</p>
-                <h6 class="text-uppercase text-white py-2">Siguenos en nuestras redes</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.tiktok.com/@carroqhatu" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.facebook.com/carroqhatu" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="https://www.instagram.com/carroqhatu" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-lg btn-dark btn-lg-square" href="https://www.youtube.com/@revelinobrayan2134" target="_blank"><i class="fab fa-youtube"></i></a>
+    <!--INICIO FOOTER-->
+    <footer class="main-footer">    
+        <img class="logo-footer" src="img/CarroQhatuL.png">
+        <div class="footer-grid">        
+            <div class="col-brand">
+                <p>Plataforma líder en la Compra y Venta de Vehículos Usados en el Perú.</p>
+                <div class="social-icons">
+                    <a href="#" class="icon-box"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="icon-box"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                
+                <div class="col-contact">
+                    <h3 class="h3footer">Contacto</h3>
+                    <div class="contact-links">
+                        <a href="tel:+51972043502"><i class="fa-solid fa-phone"></i> +51 972043502</a>
+                        <a href="mailto:rbm.aracayo@gmail.com"><i class="fa-solid fa-envelope"></i> rbm.aracayo@gmail.com</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-center">
+                <div class="center-top">
+                    <div class="sub-col">
+                        <h3 class="h3footer">Explora</h3>
+                        <ul>
+                            <li><a href="about.html">Comprar auto</a></li>
+                            <li><a href="service.html">Vender mi auto</a></li>
+                            <li><a href="#">Catálogo</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-col">
+                        <h3 class="h3footer">Soporte</h3>
+                        <ul>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Privacidad</a></li>
+                            <li><a href="#">Libro de Reclamaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="center-bottom">
+                    <h3 class="h3footer">¿Quieres que te contactemos?</h3>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Tu Email o Nº Celular aquí" required>
+                        <button type="submit">ENVIAR</button>
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <h4 class="text-uppercase text-footer mb-4">¿QUIÉRES QUE TE CONTACTEMOS?</h4>
-                <p class="mb-4">Deja tu correo electrónico para que nos pongamos en contacto contigo.</p>
-                <div class="w-100 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Tu Email aquí">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary text-uppercase px-3">Enviar</button>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            <div class="copyfooter">
-        <p class="mb-2 text-center text-body">&copy; <a href="#">CarroQhatu</a> • Todos los Derechos Reservados •</p>
-        <p class="m-0 text-center text-body">Plataforma lider en la Compra y Venta de Vehículos Usados en el Perú</p>
-    </div>
         </div>
-    </div>
-    <!-- Footer End -->
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CarroQhatu • Todos los Derechos Reservados</p>
+        </div>
+    </footer>
+    <!--FIN FOOTER-->
 
 
-    <!-- Back to Top 
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- REGRESO AL INICIO-->
+    <a href="#" class="btn btn-lg btn-subir btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries 
