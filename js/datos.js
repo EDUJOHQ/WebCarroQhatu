@@ -2,7 +2,7 @@ const listaAutos = [
     {
         id: "Mitsubishi-L200-4x2", // Este ID debe ser único para cada auto
         nombre: "Mitsubishi L200 4x2",
-        subtitulo: "Pick-up 2023",
+        subtitulo: "Pick-up",
         motor: "2.4L Diesel",
         km: "75.000",
         ubicacion: "Arequipa",
