@@ -1466,54 +1466,30 @@ body { background-color: #ffffff; font-family: 'Open Sans', sans-serif; color: #
 
 /*FIN 3 CARD INICIALES*/
 
-/* CARD */
-.mv-card {
-    min-width: 170px;           
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-    transition: 0.25s ease;
-}
+.mv-card:hover .mv-img{
+    transform: scale(1.04);
 
-.mv-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-}
-
-/* IMAGEN */
-.mv-img {
-    width: 100%;
-    height: 150px;              
-    object-fit: cover;
 }
 .object-car{
     object-position: 50% 40%;
 }
-/* TÍTULO DEL AUTO */
-.mv-card h4 {            
-    padding: 8px 12px 2px;  
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #242424;
-}
-
-/* PRECIO */
-.mv-price {
-    font-size: 19px;             
-    padding: 0 12px;
-    font-weight: 800;
-    margin-top: 0;
-    color: #323841;
-    margin-bottom: 0;            
-}
-
 .mv-month {
-    padding: 0 12px 8px;       
+    color: #666;
+    font-size: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: auto; 
+    padding: 0px 12px 12px;
+
+    /*padding: 0 12px 8px;       
     color: #3b3b3b;
     font-size: 12px;         
-    margin-top: 2px;
+    margin-top: 2px;*/
+}
+.mv-month i {
+    color: #999;
+    margin-right: 4px;
 }
 
 /* RESPONSIVE */
@@ -2419,49 +2395,73 @@ a:hover {
 /* CARD */
 .mv-card {
     background: #fff;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
-    transition: 0.25s ease;
-}
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+    transition: transform .25s ease, box-shadow .25s ease;
 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 315px;
+}
+.mv-carousel > a {
+    display: block;
+    width: 180px;
+    flex-shrink: 0;
+}
 .mv-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.18);
 }
 
 /* IMAGEN */
 .mv-img {
     width: 100%;
-    height: 150px;
+    height: 170px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 /* TÍTULO */
 .mv-card h4 {
-    font-size: 15px;
-    padding: 8px 12px 2px;
-    line-height: 1.2;
-    white-space: nowrap;
+    font-size: 16px;
+    padding: 10px 12px 4px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #222;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* máximo 2 líneas */
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+    min-height: 38px;
+    margin: 0;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
 }
 
 /* PRECIO */
 .mv-price {
-    font-size: 19px;
+    font-size: 20px;
+    padding: 2px 12px 4px;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+    min-height: 28px;
+
+    /*font-size: 20px;
     padding: 0 12px;
     font-weight: 800;    
     color: #323841;
-    margin: 0;
+    margin: 0;*/
+}
+.mv-divider {
+    height: 1px;
+    background: #eee;
+    margin: 6px 12px;
 }
 
-/* INFO */
-.mv-month {
-    padding: 0 12px 10px;
-    color: #666;
-    font-size: 12px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 600px) {

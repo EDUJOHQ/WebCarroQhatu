@@ -62,7 +62,7 @@ const listaAutos = [
         subtitulo: "SUV",
         km: "57,000",
         ubicacion: "Arequipa",
-        precioContado: "S/. 70,000 PEN",
+        precioContado: "S/. 47,000 PEN",
         anio: "2024",
         motor: "1.8 Bi-Combustible",
         version: "-",
@@ -144,6 +144,20 @@ const listaAutos = [
         id: "MITSUBISHI-L200-2013",
         nombre: "Mitsubishi L200",
         subtitulo: "PICK-UP",
+        km: "-",
+        ubicacion: "Juliaca",
+        precioContado: "-",
+        anio: "2013",
+        motor: "-",
+        version: "-",
+        transmision: "-",
+        otros:"-",
+        fotos: ["img/L200-1-2013.png","img/L200-2-2013.png"]
+    },
+    {
+        id: "MITSUBISHI-L200-2025",
+        nombre: "Mitsubishi L200",
+        subtitulo: "PICK-UP",
         km: "13,000",
         ubicacion: "Juliaca",
         precioContado: "$ 35,000 USD",
@@ -180,7 +194,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/TOYOTA-HILUX-2015.png","img/TOYOTA-HILUX-2015-2.png"]
     }, 
     {
         id: "RENAULT-LOGAN-2018",
@@ -194,35 +208,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"Cámara de retroceso - 2 Llaves Originales",
-        fotos: ["img/"]
-    }, 
-    {
-        id: "MITSUBISHI-L200-2025",
-        nombre: "Mitsubishi L200",
-        subtitulo: "PICK-UP",
-        km: "13,000",
-        ubicacion: "Juliaca",
-        precioContado: "$ 35,000 USD",
-        anio: "2025",
-        motor: "2.4 Diesel",
-        version: "-",
-        transmision: "-",
-        otros:"-",
-        fotos: ["img/"]
-    }, 
-    {
-        id: "-",
-        nombre: "-",
-        subtitulo: "-",
-        km: "-",
-        ubicacion: "-",
-        precioContado: "S/.PEN",
-        anio: "-",
-        motor: "-",
-        version: "-",
-        transmision: "-",
-        otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/RENAULT-LOGAN-1.png","img/RENAULT-LOGAN-2.png","img/RENAULT-LOGAN-3.png","img/RENAULT-LOGAN-4.png"]
     }, 
     {
         id: "MAZDA-CX5-2016",
@@ -236,7 +222,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/MAZDA-CX5-1.png","img/MAZDA-CX5-2.png","img/MAZDA-CX5-3.png"]
     }, 
     {
         id: "KING-LONG-2024",
@@ -250,7 +236,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/KINGLONG-1.png","img/KINGLONG-2.png","img/KINGLONG-3.png"]
     }, 
     {
         id: "KIA-SOLUTO-SEMIFULL-2021",
@@ -264,7 +250,7 @@ const listaAutos = [
         version: "Semifull",
         transmision: "Mecánica",
         otros:"Piso tapizado, asientos enmicados, techo enmicado",
-        fotos: ["img/"]
+        fotos: ["img/KIA-SOLUTO-1.png","img/KIA-SOLUTO-2.png","img/KIA-SOLUTO-3.png","img/KIA-SOLUTO-4.png","img/KIA-SOLUTO-5.png","img/KIA-SOLUTO-6.png","img/KIA-SOLUTO-7.png","img/KIA-SOLUTO-8.png","img/KIA-SOLUTO-9.png"]
     }, 
     {
         id: "HYUNDAI-VERNA-2020",
@@ -278,7 +264,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/HYUNDAI-VERNA-1.png","img/HYUNDAI-VERNA-2.png","img/HYUNDAI-VERNA-3.png","img/HYUNDAI-VERNA-4.png","img/HYUNDAI-VERNA-5.png","img/HYUNDAI-VERNA-6.png"]
     },   
     {
         id: "JMC-VIGUS-2024",
@@ -292,7 +278,63 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/JMCVIGUS.png"]
+        fotos: ["img/JMCVIGUS.png","img/JMC-VIGUS-2.png","img/JMC-VIGUS-3.png","img/JMC-VIGUS-4.png"]
+    }, 
+    {
+        id: "TOYOTA-HILUX-2017",
+        nombre: "Toyota Hilux SR",
+        subtitulo: "PICK-UP",
+        km: "93,000",
+        ubicacion: "Juliaca",
+        precioContado: "$ 21,000 USD",
+        anio: "2017",
+        motor: "1.0 GD Turbo Intercooler",
+        version: "-",
+        transmision: "-",
+        otros:"-",
+        fotos: ["img/HILUX2017-1.jpg","img/HILUX2017-2.jpg","img/HILUX2017-3.jpg","img/HILUX-2017-4.jpg"]
+    }, 
+    {
+        id: "TOYOTA-RAV4",
+        nombre: "Toyota Rav4 Full",
+        subtitulo: "SUV",
+        km: "152,000",
+        ubicacion: "Juliaca",
+        precioContado: "S/. 50,000 PEN",
+        anio: "2013",
+        motor: "2.5cc",
+        version: "Full",
+        transmision: "-",
+        otros:"-",
+        fotos: ["img/RAV4-1.jpg","img/RAV4-2.jpg","img/RAV4-3.jpg","img/RAV4-4.jpg"]
+    }, 
+    {
+        id: "NISSAN-NAVARA",
+        nombre: "Nissan Navara ",
+        subtitulo: "PICK-UP",
+        km: "226,000",
+        ubicacion: "Juliaca",
+        precioContado: "S/. 37,000 PEN",
+        anio: "2011",
+        motor: "2.5 Turbo Intercooler",
+        version: "-",
+        transmision: "-",
+        otros:"-",
+        fotos: ["img/NAVARA1.jpg","img/NAVARA2.jpg","img/NAVARA3.jpg","img/NAVARA4.jpg","img/NAVARA5.jpg","img/NAVARA6.jpg","img/NAVARA7.jpg","img/NAVARA8.jpg","img/NAVARA9.jpg"]
+    }, 
+    {
+        id: "HONDA-HR-V-2022",
+        nombre: "Honda HR-V EXL",
+        subtitulo: "SUV",
+        km: "76,000",
+        ubicacion: "Juliaca",
+        precioContado: "$ 17,500 USD",
+        anio: "2022",
+        motor: "1.8cc",
+        version: "-",
+        transmision: "Mecánica",
+        otros:"Paddle shirft - 6 Airbags - Controls estabilidad - Asis.Frenado - Asis. De Pendiente",
+        fotos: ["img/HONDA-HR-V.jpg","img/HONDA-HR-V2.jpg","img/HONDA-HR-V3.jpg","img/HONDA-HR-V4.jpg","img/HONDA-HR-V5.jpg","img/HONDA-HR-V6.jpg","img/HONDA-HR-V7.jpg"]
     }, 
     // Agrega aquí los otros 18 siguiendo el mismo formato...
 ];
