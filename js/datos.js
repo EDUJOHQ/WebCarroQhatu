@@ -40,7 +40,7 @@ const listaAutos = [
         version: "Quattro",
         transmision: "Automática",
         otros:"Lunas Polarizadas 3M - 8 airbag - Dos llaves",
-        fotos: ["img/audiq5.jpg", "img/audiq5-2.jpg"]
+        fotos: ["img/audiq5.jpg", "img/AUDIQ5-2.png"]
     },
     {
         id: "hyundai-tucson-2019",
@@ -68,7 +68,7 @@ const listaAutos = [
         version: "-",
         transmision: "Mecánica",
         otros:"-",
-        fotos: ["img/audiq5.jpg"]
+        fotos: ["img/pruebanewglory.png","img/GLORYNEW580-2.png","img/GLORYNEW580-3.png","img/GLORYNEW580-4.png","img/GLORYNEW580-5.png","img/GLORYNEW580-6.png","img/GLORYNEW580-7.png"]
     },
     {
         id: "CHEVROLET-TRACKET-2022",
@@ -82,7 +82,7 @@ const listaAutos = [
         version: "LTZ",
         transmision: "Automática",
         otros:"Pantalla de 8' - AppleCarPlay - Rines de Aleacion 17' - 6 airbags",
-        fotos: ["img/"]
+        fotos: ["img/HYUNDAITRACKER-1.png","img/HYUNDAITRACKER-2.png","img/HYUNDAITRACKER-3.png","img/HYUNDAITRACKER-4.png","img/HYUNDAITRACKER-5.png","img/HYUNDAITRACKER-6.png"]
     },
     {
         id: "FORLAND-300",
@@ -96,7 +96,7 @@ const listaAutos = [
         version: "Carga",
         transmision: "Mecánica",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/FORLANDF300-1.png","img/FORLANDF300-2.png","img/FORLANDF300-4.png"]
     },
     {
         id: "GLORY-580",
@@ -110,7 +110,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"3 filas asientos - Aros Magnesio 17' - Espejos abatibles - Control de estabilidad - Asientos Ecocuero",
-        fotos: ["img/"]
+        fotos: ["img/GLORY580-1.png","img/GLORY580-2.png","img/GLORY580-3.png","img/GLORY580-4.png","img/GLORY580-5.png","img/GLORY580-6.png","img/GLORY580-7.png","img/GLORY580-8.png"]
     },
     {
         id: "CHEVROLET-SPIN-2023",
@@ -124,7 +124,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"7 asientos - 3 filas",
-        fotos: ["img/"]
+        fotos: ["img/chevSPIN.jpg","img/chevSPIN-2.jpg","img/chevSPIN-3.png","img/chevSPIN-4.jpg","img/chevSPIN-5.png"]
     }, 
     {  
         id: "VOLKSWAGEN-TIGUAN-2012",
@@ -138,7 +138,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/W-TIGUAN1.png","img/W-TIGUAN2.png"]
     },
     {
         id: "MITSUBISHI-L200-2013",
@@ -152,7 +152,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/MITSU-L200-1.png","img/MITSU-L200-2.png","img/MITSU-L200-3.png"]
     }, 
     {
         id: "TOYOTA-HILUX-2019",
@@ -166,7 +166,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/HILUX-2019-1.png","img/HILUX-2019-2.png","img/HILUX-2019-3.png"]
     }, 
     {
         id: "TOYOTA-HILUX-2015",
@@ -292,7 +292,7 @@ const listaAutos = [
         version: "-",
         transmision: "-",
         otros:"-",
-        fotos: ["img/"]
+        fotos: ["img/JMCVIGUS.png"]
     }, 
     // Agrega aquí los otros 18 siguiendo el mismo formato...
 ];

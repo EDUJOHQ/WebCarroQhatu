@@ -235,8 +235,15 @@ h6,
 body { background-color: #ffffff; font-family: 'Open Sans', sans-serif; color: #1a1a1a; }
         
         /* Contenedor de Imagen con Flechas */
-        .carousel-container { position: relative; border-radius: 12px; overflow: hidden; background: #f4f4f4; }
-        .img-main { width: 100%; height: 450px; object-fit: cover; }
+        .carousel-container { 
+            position: relative; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background: #f4f4f4; }
+        .img-main { 
+            width: 100%; 
+            height: 450px; 
+            object-fit: cover; }
         
         .btn-nav { 
             position: absolute; top: 50%; transform: translateY(-50%);
