@@ -121,11 +121,11 @@
 
                 </div> <!--fin tech grid-->
                     
-                    <div class="btnReservarDetail">
-                        <button id="btnReservar" class="btn-reservarcardetail">
-                        Reservar ahora
+                <div class="btnReservarDetail">
+                    <button id="btnReservar" class="btn-reservarcardetail">
+                    Reservar ahora
                     </button>
-                    </div>
+                </div>
                     
                 </div>
             </div>
@@ -144,8 +144,7 @@
     <!--BANNER DETAIL-->
         <section class="cards-detailcontainer">
             <div class="cta-detailgrid">
-                <!-- CARD 1 -->
-                <article class="cta-img-carddetail">
+                <article id="bannerReservar" class="cta-img-carddetail" style="cursor:pointer;">
                     <img src="img/bannerdetail.svg" alt="¿Te gusta este vehículo?">
                 </article>
             </div>
@@ -160,16 +159,16 @@
       <section class="mas-vendidos container">
             <div class="carousel-wrapper">
                 <button class="mv-arrow left">&#10094;</button>
-                <div class="mv-carousel">                   
-                    <a href="detail.html?id=HONDA-HR-V-2022">
+                <div class="mv-carousel"> <a href="detail.html?id=HONDA-HR-V-2022">
                         <div class="mv-card">
                             <img src="img/HONDA-HR-V.jpg" class="mv-img">
                             <h4>HONDA HR-V EXL</h4>
-                            <p class="mv-price">$ 17,500</p>                        
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 17,500 <span class="abrev-divisa">USD</span></p>
                             <div class="mv-divider"></div>
                             <p class="mv-month">
-                                <i class="fa fa-road"></i> 76mil KM |
-                                <i class="fa fa-cogs"></i> 1.8cc
+                                <span><i class="fa fa-road"></i> 76 mil KM</span>
+                                <span><i class="fa fa-cogs"></i> 1.8 cc</span>
                             </p>
                         </div>
                     </a>
@@ -177,10 +176,12 @@
                         <div class="mv-card">
                             <img src="img/NAVARA1.jpg" class="mv-img">
                             <h4>Nissan Navara 4x4</h4>
-                            <p class="mv-price">S/37,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/37,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                                <i class="fa fa-road"></i> 226mil KM |
-                                <i class="fa fa-cogs"></i> 2.5
+                                <span><i class="fa fa-road"></i> 226mil KM </span>
+                                <span><i class="fa fa-cogs"></i> 2.5</span>
                             </p>
                         </div>
                     </a> 
@@ -188,10 +189,12 @@
                         <div class="mv-card">
                             <img src="img/RAV4-1.jpg" class="mv-img">
                             <h4>Toyota Rav4 4x4 Full</h4>
-                            <p class="mv-price">S/. 50,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 50,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                                <i class="fa fa-road"></i> 152mil KM |
-                                <i class="fa fa-cogs"></i> 2.5cc 
+                                <span><i class="fa fa-road"></i> 152mil KM </span>
+                                <span><i class="fa fa-cogs"></i> 2.5cc </span>
                             </p>
                         </div>
                     </a> 
@@ -199,10 +202,13 @@
                         <div class="mv-card">
                             <img src="img/HILUX2017-1.jpg" class="mv-img">
                             <h4>Toyota Hilux 4x4 SR 2017</h4>
-                            <p class="mv-price">$ 21,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 21,000<span class="abrev-divisa">USD</span></p>                
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                                <i class="fa fa-road"></i> 93mil KM |
-                                <i class="fa fa-cogs"></i> 1.0 GD
+                                <span><i class="fa fa-road"></i> 93mil KM </span>
+                                <span><i class="fa fa-cogs"></i> 1.0 GD</span>
+                                
                             </p>
                         </div>
                     </a>     
@@ -210,29 +216,40 @@
                         <div class="mv-card" onclick="location.href='detail.html?id=Mitsubishi-L200-4x2'" style="cursor: pointer;">
                             <img src="img/L2002.jpg" class="mv-img">
                             <h4>Mitsubishi L200 4x2</h4>
-                            <p class="mv-price">$ 16,500 USD</p>
-                            <p class="mv-month">
-                            <i class="fa fa-road"></i> 74mil KM| <i class="fa fa-cogs"></i> 2.4 
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 16,500<span class="abrev-divisa">USD</span></p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-month">                                
+                                <span><i class="fa fa-road"></i> 74mil KM </span>
+                                <span><i class="fa fa-cogs"></i> 2.4 </span>                                
                             </p>
                         </div>
                     </a>
                     <a href="detail.html?id=Kia-Sportage-4x4-2016-mod-2017" class="text-decoration-none text-dark">
-                    <div class="mv-card">
-                        <img src="img/sportage1.jpg" class="mv-img">
-                        <h4>Kia Sportage 4x4 2016 mod 2017</h4>
-                        <p class="mv-price">S/. 61,000</p>
-                        <p class="mv-month">
-                        <i class="fa fa-road"></i> 53mil KM| <i class="fa fa-cogs"></i> 2.0
-                        </p>                      
-                    </div>
+                        <div class="mv-card">
+                            <img src="img/sportage1.jpg" class="mv-img">
+                            <h4>Kia Sportage 4x4 2016</h4>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 61,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-month">
+                                <span><i class="fa fa-road"></i> 53mil KM</span>
+                                
+                                <span><i class="fa fa-cogs"></i> 2.0</span>
+                                
+                            </p>                      
+                        </div>
                     </a>
                     <a href="detail.html?id=AudiQ5-2012">
                         <div class="mv-card">
                             <img src="img/audiq5.jpg" class="mv-img">
                             <h4>Audi Q5 4x4 2012</h4>
-                            <p class="mv-price">$ 55,000 USD</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 55,000<span class="abrev-divisa">USD</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 99mil KM| <i class="fa fa-cogs"></i> 2.0 
+                                <span><i class="fa fa-road"></i> 99mil KM</span>                                                    
+                                <span><i class="fa fa-cogs"></i> 2.0 </span>
                             </p>
                         </div>
                     </a>
@@ -240,39 +257,51 @@
                         <div class="mv-card">
                             <img src="img/TUCSON2019.jpg" class="mv-img">
                             <h4>Hyundai Tucson 2019</h4>
-                            <p class="mv-price">S/. 70,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 70,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 64mil KM| <i class="fa fa-cogs"></i> 2.0
+                                <span><i class="fa fa-road"></i> 64mil KM</span>                            
+                                <span> <i class="fa fa-cogs"></i> 2.0</span>                           
                             </p>
                         </div>  
                     </a>
                     <a href="detail.html?id=GLORY-NEW-580">
                         <div class="mv-card">
                             <img src="img/DFSKGLORYNEW580.jpg" class="mv-img">
-                            <h4>DFSK Glory New 580 2024</h4>
-                            <p class="mv-price">S/. 47,000</p>
+                            <h4>DFSK Glory New 580</h4>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 47,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 57mil KM| <i class="fa fa-cogs"></i> 1.8 Bi
+                                <span> <i class="fa fa-road"></i> 57mil KM</span>                           
+                                <span><i class="fa fa-cogs"></i> 1.8 Bi</span>                                 
                             </p>
                         </div>
                     </a>
                     <a href="detail.html?id=CHEVROLET-TRACKET-2022">
                         <div class="mv-card">
                             <img src="img/TRACKERLTZ.jpg" class="mv-img">
-                            <h4>Chevrolet Tracker LTZ 2022</h4>
-                            <p class="mv-price">$ 14,500 USD</p>
+                            <h4>Chevrolet Tracker LTZ</h4>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 14,500<span class="abrev-divisa">USD</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 17mil KM| <i class="fa fa-cogs"></i> 1.2
+                                <span><i class="fa fa-road"></i> 17mil KM</span>                            
+                                <span><i class="fa fa-cogs"></i> 1.2</span> 
                             </p>
                         </div>
                     </a>
                     <a href="detail.html?id=FORLAND-300">
                         <div class="mv-card">
-                            <img src="img/FORLANDF300.jpg" class="mv-img">
+                            <img src="img/FORLANDF300-1.png" class="mv-img">
                             <h4>Forland F300 3Tn 2024</h4>
-                            <p class="mv-price">$ 17,000 USD</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">$ 17,000<span class="abrev-divisa">USD</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 1279 KM| <i class="fa fa-cogs"></i> 2.8
+                                <span><i class="fa fa-road"></i> 1279 KM </span>                            
+                                <span><i class="fa fa-cogs"></i> 2.8</span>
                             </p>
                         </div>
                     </a>
@@ -280,9 +309,12 @@
                         <div class="mv-card">
                             <img src="img/glory580.jpg" class="mv-img">
                             <h4>DFSK Glory 580 2024</h4>
-                            <p class="mv-price">S/. 52,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 52,000<span class="abrev-divisa">USD</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 50mil KM| <i class="fa fa-cogs"></i> 1.8
+                                <span><i class="fa fa-road"></i> 50mil KM</span>                            
+                                <span><i class="fa fa-cogs"></i> 1.8</span> 
                             </p>
                         </div>
                     </a>
@@ -290,13 +322,16 @@
                         <div class="mv-card">
                             <img src="img/chevSPIN.jpg" class="mv-img">
                             <h4>Chevrolet Spin 2023</h4>
-                            <p class="mv-price">S/. 55,000</p>
+                            <div class="mv-divider"></div>
+                            <p class="mv-price">S/. 55,000<span class="abrev-divisa">PEN</span></p>
+                            <div class="mv-divider"></div>
                             <p class="mv-month">
-                            <i class="fa fa-road"></i> 20mil KM| <i class="fa fa-cogs"></i> 1.8
+                                <span><i class="fa fa-road"></i> 20mil KM</span>
+                          
+                                <span><i class="fa fa-cogs"></i> 1.8</span>
                             </p>
                         </div>
-                    </a>           
-                </div>
+                    </a>  </div>
                 <button class="mv-arrow right">&#10095;</button>
             </div>
         </section>
@@ -309,130 +344,185 @@
         <section class="mas-vendidos container scroll2">
             <div class="carousel-wrapper">
                 <button class="mv2-arrow left">&#10094;</button>
-                <div class="mv-carousel">                               
-                    <a href="detail.html?id=VOLKSWAGEN-TIGUAN-2012">
-                        <div class="mv-card">
-                            <img src="img/TIGUAN.jpg" class="mv-img">
-                            <h4>Volkswagen Tiguan 4x4 2012 Mod 2013</h4>
-                            <p class="mv-price">$ 14,700 USD</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 121mil KM |
-                                <i class="fa fa-cogs"></i> 2.0
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=MITSUBISHI-L200-2013">
-                        <div class="mv-card">
-                            <img src="img/L2002013.jpg" class="mv-img">
-                            <h4>Mitsubishi L200 2013 Mod 2014</h4>
-                            <p class="mv-price">S/. 49,500</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 105mil KM |
-                                <i class="fa fa-cogs"></i> 2.5
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=TOYOTA-HILUX-2019">
-                        <div class="mv-card">
-                            <img src="img/hiluxsrv20192.jpg" class="mv-img">
-                            <h4>Toyota Hilux SRV 2019</h4>
-                            <p class="mv-price">$ 31,000 USD</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 97mil KM |
-                                <i class="fa fa-cogs"></i> 2.8
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=TOYOTA-HILUX-2015">
-                        <div class="mv-card">
-                            <img src="img/hilux4x42015.jpg" class="mv-img">
-                            <h4>Toyota Hilux 4x4 2015</h4>
-                            <p class="mv-price">S/. 25,500</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 193mil KM |
-                                <i class="fa fa-cogs"></i> 1kd 3.0
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=RENAULT-LOGAN-2018">
-                        <div class="mv-card">
-                            <img src="img/renaultlogan.jpg" class="mv-img">
-                            <h4>Renault Logan 2018 Mod 2019</h4>
-                            <p class="mv-price">S/. 29,500</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 58,800 KM |
-                                <i class="fa fa-cogs"></i> 1.6
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=MITSUBISHI-L200-2025">
-                        <div class="mv-card">
-                            <img src="img/MITSU-L200-1.png" class="mv-img">
-                            <h4>Mitsubishi L200 4x4 2025</h4>
-                            <p class="mv-price">$ 35,000 USD</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 13mil KM |
-                                <i class="fa fa-cogs"></i> 2.4
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=MAZDA-CX5-2016">
-                        <div class="mv-card">
-                            <img src="img/MAZDACX5.jpg" class="mv-img">
-                            <h4>Mazda CX-5 2016 Mod 2017</h4>
-                            <p class="mv-price">S/. 55,000</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> --- KM |
-                                <i class="fa fa-cogs"></i> 2.0
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=KING-LONG-2024">                    
-                        <div class="mv-card">
-                            <img src="img/kinglong.jpg" class="mv-img">
-                            <h4>King Long Santana 2024 Mod 2025</h4>
-                            <p class="mv-price">S/. 63,000</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 21mil KM |
-                                <i class="fa fa-cogs"></i> 2.7
-                            </p>
-                        </div>
-                    </a>
+                <div class="mv-carousel">                 
+                <a href="detail.html?id=VOLKSWAGEN-TIGUAN-2012">
+                    <div class="mv-card">
+                        <img src="img/TIGUAN.jpg" class="mv-img">
+                        <h4>Volkswagen Tiguan 4x4 2012 Mod 2013</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">$ 14,700<span class="abrev-divisa">USD</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                                <span><i class="fa fa-road"></i> 121mil KM </span>                            
+                                <span><i class="fa fa-cogs"></i> 2.0</span>                            
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=MITSUBISHI-L200-2013">
+                    <div class="mv-card">
+                        <img src="img/L2002013.jpg" class="mv-img">
+                        <h4>Mitsubishi L200 2013 Mod 2014</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 49,500<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span><i class="fa fa-road"></i> 105mil KM </span>
+                            <span><i class="fa fa-cogs"></i> 2.5</span>                        
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=TOYOTA-HILUX-2019">
+                    <div class="mv-card">
+                        <img src="img/hiluxsrv20192.jpg" class="mv-img">
+                        <h4>Toyota Hilux SRV 2019</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">$ 31,000<span class="abrev-divisa">USD</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span><i class="fa fa-road"></i> 97mil KM </span>
+                            <span><i class="fa fa-cogs"></i> 2.8</span>                                                       
+                        </p>
+                    </div>
+                </a>
 
-                    <a href="detail.html?id=KIA-SOLUTO-SEMIFULL-2021">
-                        <div class="mv-card">
-                            <img src="img/kiasoluto.jpg" class="mv-img">
-                            <h4>Kia Soluto SemiFull 2021-2022</h4>
-                            <p class="mv-price">S/. 37,000</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 84mil KM |
-                                <i class="fa fa-cogs"></i> 1.4
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=HYUNDAI-VERNA-2020">
-                        <div class="mv-card">
-                            <img src="img/hyundaiverna.jpg" class="mv-img">
-                            <h4>Hyundai Verna 2020</h4>
-                            <p class="mv-price">S/. 35,000</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 75mil KM |
-                                <i class="fa fa-cogs"></i> 1.4
-                            </p>
-                        </div>
-                    </a>
-                    <a href="detail.html?id=JMC-VIGUS-2024">
-                        <div class="mv-card">
-                            <img src="img/JMCVIGUS.png" class="mv-img">
-                            <h4>JMC VIGUS PLUS 4X4 2024</h4>
-                            <p class="mv-price">S/. 63,000</p>
-                            <p class="mv-month">
-                                <i class="fa fa-road"></i> 23mil KM |
-                                <i class="fa fa-cogs"></i> 2.4
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                <a href="detail.html?id=TOYOTA-HILUX-2015">
+                    <div class="mv-card">
+                        <img src="img/hilux4x42015.jpg" class="mv-img">
+                        <h4>Toyota Hilux 4x4 2015</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 25,500<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span> 
+                                <i class="fa fa-road"></i>193mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>1kd 3.0
+                            </span>                           
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=RENAULT-LOGAN-2018">
+                    <div class="mv-card">
+                        <img src="img/renaultlogan.jpg" class="mv-img">
+                        <h4>Renault Logan 2018 Mod 2019</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 29,500<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span> 
+                                <i class="fa fa-road"></i>58,800 KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>1.6
+                            </span>                           
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=MITSUBISHI-L200-2025">
+                    <div class="mv-card">
+                        <img src="img/missubishil200.jpg" class="mv-img">
+                        <h4>Mitsubishi L200 4x4 2025</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">$ 35,000<span class="abrev-divisa">USD</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span> 
+                                <i class="fa fa-road"></i>13mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>2.4
+                            </span>                           
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=MAZDA-CX5-2016">
+                    <div class="mv-card">
+                        <img src="img/MAZDACX5.jpg" class="mv-img">
+                        <h4>Mazda CX-5 2016 Mod 2017</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 55,000<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span>
+                                <i class="fa fa-road"></i>1279 KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>2.0
+                            </span>
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=KING-LONG-2024">                    
+                    <div class="mv-card">
+                        <img src="img/kinglong.jpg" class="mv-img">
+                        <h4>King Long Santana 2024 Mod 2025</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 63,000<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span>
+                                <i class="fa fa-road"></i>21mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>2.7
+                            </span>
+                        </p>
+                    </div>
+                </a>
+
+                <a href="detail.html?id=KIA-SOLUTO-SEMIFULL-2021">
+                    <div class="mv-card">
+                        <img src="img/kiasoluto.jpg" class="mv-img">
+                        <h4>Kia Soluto SemiFull 2021-2022</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 37,000<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span>
+                                <i class="fa fa-road"></i>84mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>1.4
+                            </span>
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=HYUNDAI-VERNA-2020">
+                    <div class="mv-card">
+                        <img src="img/hyundaiverna.jpg" class="mv-img">
+                        <h4>Hyundai Verna 2020</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 35,000<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span>
+                                <i class="fa fa-road"></i>75mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>1.4
+                            </span>
+                        </p>
+                    </div>
+                </a>
+                <a href="detail.html?id=JMC-VIGUS-2024">
+                    <div class="mv-card">
+                        <img src="img/JMCVIGUS.png" class="mv-img">
+                        <h4>JMC VIGUS PLUS 4X4 2024</h4>
+                        <div class="mv-divider"></div>
+                        <p class="mv-price">S/. 63,000<span class="abrev-divisa">PEN</span></p>
+                        <div class="mv-divider"></div>
+                        <p class="mv-month">
+                            <span>
+                                <i class="fa fa-road"></i>23mil KM 
+                            </span>
+                            <span>
+                                <i class="fa fa-cogs"></i>2.4
+                            </span>
+                        </p>
+                    </div>
+                </a>
+            </div>
                 <button class="mv2-arrow right">&#10095;</button>
             </div>
         </section>
@@ -506,17 +596,22 @@
                 img.className = 'thumb';
                 img.onclick = () => { currentImgIdx = index; updateImage(); };
                 galeria.appendChild(img);
-            });
-
-                 // 1. Configuramos los datos de contacto
-                const telefono = "51972043502"; // Reemplaza con tu número real
+            });                
+                const telefono = "51972043502"; 
                 const mensaje = `Hola! Estoy interesado en el vehículo: ${auto.nombre} (${auto.anio}). ¿Sigue disponible?`;
                 const whatsappUrl = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+                //para banner:
+                const mensajebanner = `Hola! Estoy interesado en el vehículo: ${auto.nombre} (${auto.anio}). ¿Sigue disponible? Ayudenme con todo el proceso!`;
+                const whatsappUrlbanner = `https://wa.me/${telefono}?text=${encodeURIComponent(mensajebanner)}`;
 
-                // ASIGNACIÓN AL BOTÓN NEGRO (Que ya te funciona)
                 const btnNegro = document.getElementById('btnReservar');
                 if (btnNegro) {
                     btnNegro.onclick = () => window.open(whatsappUrl, '_blank');
+                }
+
+                const bannerReserva = document.getElementById('bannerReservar');
+                if(bannerReserva){
+                    bannerReserva.onclick = () => window.open(whatsappUrlbanner, '_blank');
                 }
         }
 
@@ -626,9 +721,9 @@
             }
 
             const text = `*NUEVA SOLICITUD DE COMPRA*%0A%0A` +
-                        `🚗 *Vehículo:* ${model}%0A` + 
-                        `📅 *Año:* ${year}%0A` +
-                        `💰 *Presupuesto:* ${budget}`;
+                        `*Vehículo:* ${model}%0A` + 
+                        `*Año:* ${year}%0A` +
+                        `*Presupuesto:* ${budget}`;
 
             window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
             }

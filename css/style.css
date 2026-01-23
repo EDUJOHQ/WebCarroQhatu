@@ -569,8 +569,7 @@ body { background-color: #ffffff; font-family: 'Open Sans', sans-serif; color: #
         .subtexto{        
             font-size: 30px;
             margin-bottom: 2px;
-            color: #242424;
-            
+            color: #242424;            
         }
         /*cards servicios compra*/
         .cta-img-cardcompra {
@@ -2428,7 +2427,7 @@ a:hover {
     font-size: 16px;
     padding: 10px 12px 4px;
     line-height: 1.25;
-    font-weight: 600;
+    font-weight: 600 !important;
     color: #222;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* máximo 2 líneas */
@@ -2455,6 +2454,12 @@ a:hover {
     font-weight: 800;    
     color: #323841;
     margin: 0;*/
+}
+.abrev-divisa{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 5px;
+    color: #666;
 }
 .mv-divider {
     height: 1px;
@@ -3764,7 +3769,8 @@ h1 { font-size: 2.5rem; margin-bottom: 15px; color: var(--secondary-color); }
 }
 .car-cardcatalogo {
     background: white;
-    width: 250px;
+    max-width: 220px;
+    min-height: 410px;
     border-radius: 25px;
     border: 2px solid #000;
     overflow: hidden;
